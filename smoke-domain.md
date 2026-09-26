@@ -14,6 +14,13 @@ metadata:
       role: "Preserva los comportamientos propios del contexto"
       recommendation: "3.3.1"
       recommendation-context: "7659C3E972CCCFEF11041446AEAF9FF75209C88BF215590E01BF4619CDA0A4AA"
+    - relation: related
+      target: smoke-domain-capability.md
+      kind: nexus
+      type: capability
+      role: "Compone las perspectivas necesarias para comprender una capacidad nacida del dominio"
+      recommendation: "3.4.1"
+      recommendation-context: "7659C3E972CCCFEF11041446AEAF9FF75209C88BF215590E01BF4619CDA0A4AA"
 
 tooling:
   version: build10.1130
@@ -107,5 +114,6 @@ flowchart TD
 | Artifact | Utilidad | Link |
 | --- | --- | --- |
 | smoke-domain-behavior | Preserva los comportamientos propios del contexto | [smoke-domain-behavior.md](smoke-domain-behavior.md) |
+| smoke-domain-capability | Compone las perspectivas necesarias para comprender una capacidad nacida del dominio | [smoke-domain-capability.md](smoke-domain-capability.md) |
 <!-- /vslices:associated-artifacts -->
 
