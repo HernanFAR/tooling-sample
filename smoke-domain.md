@@ -58,6 +58,7 @@ Preserva continuidad entre un contexto de dominio, su lenguaje, conceptos, compo
 
 #### ¿Qué capacidades nacen desde este dominio?
 <!-- vslices:artifact-question id=domain-capabilities -->
+La capacidad Smoke capability nace desde este dominio.
 <!-- /vslices:artifact-question -->
 
 #### ¿Qué productos o servicios usan este significado?
