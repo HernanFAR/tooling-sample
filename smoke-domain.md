@@ -6,7 +6,14 @@ artifact:
 
 metadata:
   status: draft
-  relates: []
+  relates:
+    - relation: related
+      target: smoke-domain-behavior.md
+      kind: document
+      type: behavior
+      role: "Preserva los comportamientos propios del contexto"
+      recommendation: "3.3.1"
+      recommendation-context: "7659C3E972CCCFEF11041446AEAF9FF75209C88BF215590E01BF4619CDA0A4AA"
 
 tooling:
   version: build10.1130
@@ -99,5 +106,6 @@ flowchart TD
 <!-- vslices:associated-artifacts -->
 | Artifact | Utilidad | Link |
 | --- | --- | --- |
+| smoke-domain-behavior | Preserva los comportamientos propios del contexto | [smoke-domain-behavior.md](smoke-domain-behavior.md) |
 <!-- /vslices:associated-artifacts -->
 
