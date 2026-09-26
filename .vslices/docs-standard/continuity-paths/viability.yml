@@ -1,0 +1,91 @@
+kind: vslices-continuity-path-definition
+version: 0.1
+
+continuity-path:
+  type: viability
+
+  purpose: >
+    Preserva continuidad alrededor de las condiciones que permiten sostener un
+    elemento y las señales que obligan a reevaluar su viabilidad.
+
+  recommended-traversal: >
+    Comenzar por el objeto evaluado, identificar la dimensión de viabilidad y
+    su criterio, recorrer condiciones y restricciones, estimar el estado actual,
+    explorar riesgos y alternativas, y terminar definiendo cuándo reevaluar.
+
+  question:
+    id: viability
+    text: ¿Puede sostenerse esto bajo las condiciones actuales?
+
+    children:
+      - id: evaluated-target
+        text: ¿Qué estamos evaluando?
+        connection:
+          text: evalúa
+        recommendations:
+          - document: context
+            role: Preserva qué elemento y condiciones están siendo evaluados
+
+      - id: viability-kind
+        text: ¿Qué kind de viabilidad aplica?
+        connection:
+          text: se observa desde
+        recommendations:
+          - document: context
+            role: Preserva la dimensión desde la que se evalúa viabilidad
+
+      - id: viability-criterion
+        text: ¿Qué significa que sea viable para este kind?
+        connection:
+          text: se considera viable cuando
+        recommendations:
+          - document: consistency
+            role: Preserva criterios que deben mantenerse para considerar viable el elemento
+
+      - id: viability-conditions
+        text: ¿Qué condiciones deben cumplirse?
+        connection:
+          text: requiere
+        recommendations:
+          - document: constraint
+            role: Preserva condiciones que restringen o habilitan la viabilidad
+
+      - id: viability-restrictions
+        text: ¿Qué restricciones limitan la viabilidad?
+        connection:
+          text: está limitado por
+        recommendations:
+          - document: constraint
+            role: Preserva restricciones que condicionan la viabilidad
+
+      - id: current-viability
+        text: ¿Qué tan viable parece ahora?
+        connection:
+          text: actualmente parece
+        recommendations:
+          - document: validation
+            role: Preserva la evaluación actual frente a los criterios conocidos
+
+      - id: inviability-risks
+        text: ¿Qué podría volverlo inviable?
+        connection:
+          text: puede dejar de sostenerse por
+        recommendations:
+          - document: diagnostic
+            role: Preserva riesgos o fragilidades que amenazan la viabilidad
+
+      - id: viability-alternatives
+        text: ¿Qué alternativa lo haría más viable?
+        connection:
+          text: podría sostenerse mejor mediante
+        recommendations:
+          - document: decision-record
+            role: Preserva la elección entre alternativas de viabilidad
+
+      - id: reevaluation
+        text: ¿Cuándo debe reevaluarse?
+        connection:
+          text: debe revisarse cuando
+        recommendations:
+          - document: validation
+            role: Preserva futuras evaluaciones frente a condiciones cambiantes

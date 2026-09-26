@@ -1,0 +1,79 @@
+kind: vslices-continuity-path-definition
+version: 0.1
+
+continuity-path:
+  type: software-project
+
+  purpose: >
+    Preserva continuidad entre una solución de software, la razón por la que
+    existe, su organización técnica y el dominio que materializa.
+
+  recommended-traversal: >
+    Comenzar por la iniciativa, producto o servicio de origen, recorrer las
+    partes de la solución y sus responsabilidades, conectar dominio e
+    integraciones, revisar decisiones técnicas y terminar observando impacto o evolución.
+
+  question:
+    id: software-project
+    text: ¿Cómo está organizada esta solución de software?
+
+    children:
+      - id: project-origin
+        text: ¿Qué iniciativa, producto o servicio lo origina?
+        connection:
+          text: se origina en
+        recommendations:
+          - document: context
+            role: Preserva la razón y contexto de existencia de la solución
+
+      - id: solution-parts
+        text: ¿Qué partes componen la solución?
+        connection:
+          text: se compone de
+        recommendations:
+          - document: structure
+            role: Preserva la organización de las partes de la solución
+
+      - id: technical-responsibilities
+        text: ¿Qué responsabilidades tiene cada parte?
+        connection:
+          text: asigna responsabilidades a
+        recommendations:
+          - document: structure
+            role: Preserva responsabilidades y relaciones entre partes
+
+      - id: materialized-domain
+        text: ¿Qué conceptos de dominio organiza o materializa?
+        connection:
+          text: materializa
+        recommendations:
+          - document: domain-vocabulary
+            role: Preserva el significado de dominio materializado
+          - document: realization
+            role: Preserva cómo ese significado se realiza concretamente
+
+      - id: dependencies
+        text: ¿Qué integraciones, adapters o dependencias necesita?
+        connection:
+          text: depende de
+        recommendations:
+          - document: structure
+            role: Preserva dependencias y bordes técnicos
+          - nexus: service-consumption
+            role: Organiza perspectivas cuando la dependencia es un servicio consumible
+
+      - id: technical-decisions
+        text: ¿Qué decisiones explican esta organización?
+        connection:
+          text: está explicado por
+        recommendations:
+          - document: decision-record
+            role: Preserva por qué la solución está organizada de esa manera
+
+      - id: technical-impact
+        text: ¿Qué podría verse afectado si cambia?
+        connection:
+          text: puede afectar
+        recommendations:
+          - document: diagnostic
+            role: Preserva fragilidades o consecuencias descubiertas por el cambio

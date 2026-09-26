@@ -1,0 +1,239 @@
+kind: vslices-document-definition
+version: 0.1
+
+document:
+  type: domain-vocabulary
+  scopes:
+    - domain-context
+    - business-scenario
+    - project
+    - product
+    - service
+    - organization
+    - team
+    - system
+    - solution
+    - capability
+    - process
+    - workflow
+    - discipline
+    - technology
+    - framework
+    - method
+    - initiative
+
+  question:
+    id: domain-vocabulary
+    text: ¿Cómo hablamos?
+    children:
+      - id: terms
+        text: ¿Qué términos usamos?
+        cardinality: many
+        children:
+          - id: term-identity
+            text: ¿Qué término estamos definiendo?
+            children:
+              - id: preferred-form
+                text: ¿Cuál es su forma preferida?
+              - id: aliases
+                text: ¿Qué alias o formas equivalentes tiene?
+              - id: translations
+                text: ¿Qué traducciones relevantes tiene?
+              - id: abbreviations
+                text: ¿Qué abreviaturas o siglas tiene?
+              - id: similar-forms
+                text: ¿Qué formas similares tienen un significado distinto?
+
+          - id: term-meaning
+            text: ¿Qué significa este término?
+            children:
+              - id: essential-meaning
+                text: ¿Cuál es su significado esencial?
+              - id: associated-properties
+                text: ¿Qué propiedades están asociadas a este término?
+                cardinality: many
+                children:
+                  - id: associated-property
+                    text: ¿Qué propiedad estamos describiendo?
+                    children:
+                      - id: associated-property-name
+                        text: ¿Cuál es el nombre de esta propiedad?
+                      - id: associated-property-definition
+                        text: ¿Qué significa esta propiedad?
+                      - id: associated-property-requirement
+                        text: ¿Qué obligatoriedad tiene esta propiedad para que el término aplique?
+              - id: excluded-meaning
+                text: ¿Qué significado queda explícitamente excluido?
+              - id: representative-example
+                text: ¿Cuál es un ejemplo representativo?
+              - id: near-counterexample
+                text: ¿Cuál es un contraejemplo cercano?
+
+          - id: semantic-boundaries
+            text: ¿Cuáles son los límites de este término?
+            children:
+              - id: clear-members
+                text: ¿Qué casos pertenecen claramente al concepto?
+              - id: clear-non-members
+                text: ¿Qué casos concretos quedan claramente fuera del concepto?
+              - id: boundary-cases
+                text: ¿Qué casos están en la frontera?
+              - id: classification-conditions
+                text: ¿Qué condiciones cambian su clasificación?
+              - id: deceptive-usages
+                text: ¿Qué usos del término parecen válidos pero contradicen su significado?
+
+          - id: term-applicability
+            text: ¿Dónde es semánticamente válido este término?
+            children:
+              - id: valid-contexts
+                text: ¿En qué contextos es válido?
+              - id: meaning-shift-contexts
+                text: ¿En qué contextos cambia su significado?
+              - id: invalid-contexts
+                text: ¿En qué contextos no debería usarse?
+
+          - id: ambiguities
+            text: ¿Qué ambigüedades existen alrededor de este término?
+            children:
+              - id: confusable-terms
+                text: ¿Con qué otros términos puede confundirse?
+                cardinality: many
+              - id: apparent-equivalence
+                text: ¿Por qué parecen equivalentes?
+              - id: semantic-difference
+                text: ¿Qué diferencia semántica los separa?
+              - id: distinction-relevance
+                text: ¿En qué casos la distinción importa?
+              - id: distinction-irrelevance
+                text: ¿En qué casos la diferencia entre estos términos no afecta la interpretación?
+              - id: contextual-meanings
+                text: ¿Qué significados distintos puede tener según el contexto?
+
+          - id: term-relations
+            text: ¿Cómo se relaciona este término con otros?
+            children:
+              - id: broader-terms
+                text: ¿Qué términos son más generales?
+              - id: narrower-terms
+                text: ¿Qué términos son más específicos?
+              - id: constituent-terms
+                text: ¿Qué términos forman parte de él?
+              - id: containing-concepts
+                text: ¿De qué conceptos forma parte?
+              - id: distinction-dependents
+                text: ¿Qué términos dependen de esta distinción?
+              - id: alternative-terms
+                text: ¿Qué términos son alternativos?
+              - id: complementary-terms
+                text: ¿Qué términos son complementarios?
+              - id: other-relations
+                text: ¿Qué otras relaciones relevantes existen?
+
+          - id: term-usage
+            text: ¿Cuándo conviene usar este término?
+            children:
+              - id: preferred-over
+                text: ¿Cuándo debería preferirse sobre otro?
+              - id: avoid-usage
+                text: ¿Cuándo no deberíamos usarlo?
+              - id: precision-level
+                text: ¿Qué precisión necesitamos al usar este término?
+              - id: intended-interpretation
+                text: ¿Qué debería entender alguien cuando usamos este término?
+
+          - id: term-origin
+            text: ¿De dónde proviene este término?
+            children:
+              - id: origin-source
+                text: ¿En qué lenguaje, disciplina o sistema se origina?
+              - id: adoption-path
+                text: ¿Cómo llegó a usarse en este contexto?
+              - id: original-meaning
+                text: ¿Qué significado tenía en su origen?
+              - id: adapted-meaning
+                text: ¿Qué significado fue adaptado al incorporarlo aquí?
+              - id: deliberate-introduction
+                text: ¿Qué parte fue introducida deliberadamente?
+
+          - id: term-uncertainty
+            text: ¿Qué no tenemos claro todavía sobre este término?
+            children:
+              - id: provisional-definition
+                text: ¿Qué parte de su definición sigue siendo provisional?
+              - id: unclassified-cases
+                text: ¿Qué casos todavía no sabemos clasificar?
+              - id: debated-distinction
+                text: ¿Qué distinción sigue siendo debatida?
+              - id: stabilizing-evidence
+                text: ¿Qué evidencia falta para estabilizar su significado?
+
+          - id: term-evolution
+            text: ¿Cómo ha cambiado este término?
+            children:
+              - id: previous-meaning
+                text: ¿Qué significaba antes?
+              - id: current-meaning
+                text: ¿Qué significa ahora?
+              - id: change-reason
+                text: ¿Por qué cambió?
+              - id: legacy-meaning-usage
+                text: ¿Dónde sigue apareciendo el significado anterior?
+              - id: meaning-compatibility
+                text: ¿Qué parte del significado anterior sigue siendo compatible con el actual?
+
+      - id: deprecated-terms
+        text: ¿Qué términos ya no usamos?
+        children:
+          - id: replacement-term
+            text: ¿Qué término los reemplaza?
+          - id: deprecation-reason
+            text: ¿Por qué dejaron de usarse?
+          - id: legacy-occurrences
+            text: ¿Dónde siguen apareciendo?
+          - id: historical-meaning
+            text: ¿Qué significaban cuando estaban vigentes?
+          - id: current-interpretation
+            text: ¿Cómo deberían interpretarse hoy?
+
+      - id: vocabulary-applicability
+        text: ¿Dónde aplica este vocabulario?
+        children:
+          - id: covered-domain
+            text: ¿Qué dominio o contexto cubre?
+          - id: shared-language-audience
+            text: ¿Quién necesita compartir este lenguaje?
+          - id: validity-limit
+            text: ¿Dónde deja de ser una referencia válida?
+          - id: coexisting-vocabularies
+            text: ¿Con qué otros vocabularios puede coexistir?
+
+      - id: semantic-tensions
+        text: ¿Qué tensiones semánticas existen en este vocabulario?
+        children:
+          - id: redundant-terms
+            text: ¿Qué términos son redundantes?
+          - id: overlapping-definitions
+            text: ¿Qué definiciones se solapan?
+          - id: circular-definitions
+            text: ¿Qué definiciones son circulares?
+          - id: incompatible-meanings
+            text: ¿Qué significados son incompatibles?
+          - id: insufficient-definitions
+            text: ¿Qué términos están insuficientemente definidos?
+          - id: unclear-relations
+            text: ¿Qué relaciones tienen una semántica poco clara?
+
+      - id: vocabulary-obsolescence
+        text: ¿Cuándo deja este vocabulario de representar correctamente el lenguaje compartido?
+        children:
+          - id: domain-mismatch
+            text: ¿Qué términos dejaron de corresponder al dominio?
+          - id: changed-meanings
+            text: ¿Qué significados cambiaron?
+          - id: new-concepts
+            text: ¿Qué conceptos nuevos aparecieron?
+          - id: obsolete-distinctions
+            text: ¿Qué distinciones dejaron de ser útiles?
+          - id: obsolescence-signals
+            text: ¿Qué señales indican que el vocabulario está desactualizado?

@@ -1,0 +1,9 @@
+kind: vslices-document-definition
+version: 0.1
+
+document:
+  type: navigation
+
+  question:
+    id: navigation
+    text: ¿Cómo exploramos?

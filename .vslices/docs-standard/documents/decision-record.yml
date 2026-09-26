@@ -1,0 +1,9 @@
+kind: vslices-document-definition
+version: 0.1
+
+document:
+  type: decision-record
+
+  question:
+    id: decision-record
+    text: ¿Qué se decidió?

@@ -1,0 +1,67 @@
+kind: vslices-continuity-path-definition
+version: 0.1
+
+continuity-path:
+  type: consumable-service
+
+  purpose: >
+    Preserva continuidad entre un servicio consumible, la capacidad que ofrece,
+    sus consumidores, su forma de consumo y el significado que representa.
+
+  recommended-traversal: >
+    Comenzar por el servicio y su capacidad ofrecida, identificar consumidores,
+    recorrer la forma de consumo y el dominio representado, y luego observar
+    dependencias y decisiones que explican su exposición.
+
+  question:
+    id: consumable-service
+    text: ¿Qué capacidad ofrece este servicio y cómo debe consumirse?
+
+    children:
+      - id: offered-capability
+        text: ¿Qué capacidad ofrece?
+        connection:
+          text: ofrece
+        recommendations:
+          - nexus: capability
+            role: Compone las perspectivas necesarias para comprender la capacidad ofrecida
+
+      - id: consumers
+        text: ¿Quién o qué lo consume?
+        connection:
+          text: es consumido por
+        recommendations:
+          - document: context
+            role: Preserva el contexto de los consumidores relevantes
+
+      - id: consumption-model
+        text: ¿Cómo debe consumirse?
+        connection:
+          text: se consume mediante
+        recommendations:
+          - nexus: service-consumption
+            role: Organiza las perspectivas necesarias para comprender la forma de consumo
+
+      - id: represented-domain
+        text: ¿Qué elementos de dominio representa?
+        connection:
+          text: representa
+        recommendations:
+          - document: domain-vocabulary
+            role: Preserva el significado de dominio expuesto por el servicio
+
+      - id: dependents
+        text: ¿Qué productos, iniciativas o proyectos dependen de él?
+        connection:
+          text: es requerido por
+        recommendations:
+          - document: context
+            role: Preserva el contexto donde aparece la dependencia
+
+      - id: consumption-decisions
+        text: ¿Qué decisiones explican su forma de consumo?
+        connection:
+          text: está explicado por
+        recommendations:
+          - document: decision-record
+            role: Preserva por qué el servicio se consume de esa forma

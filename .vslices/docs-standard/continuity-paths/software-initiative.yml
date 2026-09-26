@@ -1,0 +1,84 @@
+kind: vslices-continuity-path-definition
+version: 0.1
+
+continuity-path:
+  type: software-initiative
+
+  purpose: >
+    Preserva continuidad entre una iniciativa de software, el escenario que
+    intenta intervenir, su cobertura y las piezas que participan en ella.
+
+  recommended-traversal: >
+    Comenzar por el escenario abordado, delimitar líneas de trabajo incluidas,
+    excluidas o postergadas, reconocer productos, servicios y capacidades,
+    seguir decisiones de alcance y conectar finalmente la iniciativa con
+    proyectos de software y condiciones de viabilidad.
+
+  question:
+    id: software-initiative
+    text: ¿Qué intenta cubrir esta iniciativa y qué piezas participan?
+
+    children:
+      - id: addressed-scenario
+        text: ¿Qué parte del escenario aborda?
+        connection:
+          text: aborda
+        recommendations:
+          - document: context
+            role: Preserva el escenario intervenido por la iniciativa
+
+      - id: work-line-scope
+        text: ¿Qué líneas de trabajo incluye, excluye o posterga?
+        connection:
+          text: cubre
+        recommendations:
+          - document: scope
+            role: Preserva la cobertura real de la iniciativa
+
+      - id: participating-products-services
+        text: ¿Qué productos o servicios participan?
+        connection:
+          text: se realiza mediante
+        recommendations:
+          - document: structure
+            role: Preserva cómo se organizan las piezas participantes
+
+      - id: required-capabilities
+        text: ¿Qué capacidades requiere?
+        connection:
+          text: requiere
+        recommendations:
+          - nexus: capability
+            role: Compone las perspectivas necesarias para comprender las capacidades requeridas
+
+      - id: scope-decisions
+        text: ¿Qué decisiones explican su alcance?
+        connection:
+          text: está delimitada por
+        recommendations:
+          - document: decision-record
+            role: Preserva por qué ciertas partes entran, quedan fuera o se postergan
+
+      - id: resulting-projects
+        text: ¿Qué proyectos de software originó o podría originar?
+        connection:
+          text: se materializa mediante
+        recommendations:
+          - document: realization
+            role: Preserva cómo la iniciativa se materializa concretamente
+
+      - id: initiative-viability
+        text: ¿Es viable abordar esta iniciativa ahora?
+        connection:
+          text: está condicionada por
+        recommendations:
+          - document: viability
+            role: Preserva la evaluación de viabilidad de la iniciativa
+
+      - id: initiative-learning
+        text: ¿Qué aprendizaje o cambio afecta su cobertura?
+        connection:
+          text: evoluciona por
+        recommendations:
+          - document: feedback
+            role: Preserva aprendizaje que cambia o confirma la cobertura

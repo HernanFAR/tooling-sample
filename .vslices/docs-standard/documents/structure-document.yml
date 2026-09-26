@@ -1,0 +1,212 @@
+kind: vslices-document-definition
+version: 0.1
+
+document:
+  type: structure
+  scopes:
+    - process
+    - flow
+    - workflow
+    - pipeline
+    - capability
+    - product
+    - service
+    - project
+    - solution
+    - system
+    - component
+    - module
+    - package
+    - deployment
+    - repository
+    - artifact
+    - artifact-set
+    - organization
+
+  question:
+    id: structure
+    text: ¿Cómo se organiza?
+    children:
+      - id: structural-view
+        text: ¿Qué estructura estamos describiendo?
+        children:
+          - id: structure-kind
+            text: ¿Qué tipo de estructura estamos describiendo?
+          - id: structure-state
+            text: ¿Es una estructura existente, propuesta o esperada?
+          - id: structure-source
+            text: ¿Está observada, declarada o inferida?
+          - id: declared-observed-differences
+            text: ¿Qué diferencias existen entre la estructura declarada y la observada?
+
+      - id: observation-level
+        text: ¿A qué nivel estamos observando la estructura?
+        children:
+          - id: shown-detail
+            text: ¿Qué grado de detalle estamos mostrando?
+          - id: omitted-detail
+            text: ¿Qué detalle estamos omitiendo?
+          - id: collapsed-internal-structure
+            text: ¿Qué estructura interna estamos representando como una sola parte?
+
+      - id: parts
+        text: ¿Qué partes componen esta estructura?
+        children:
+          - id: part-representation
+            text: ¿Qué representa cada parte?
+          - id: part-kind
+            text: ¿Es un tipo, instancia, rol o agrupación?
+          - id: part-identity
+            text: ¿Cómo se distingue una parte de otra?
+          - id: part-multiplicity
+            text: ¿Cuántas instancias de esta parte pueden existir?
+          - id: part-presence
+            text: ¿Es necesaria, opcional o condicional?
+
+      - id: relationships
+        text: ¿Cómo se relacionan las partes?
+        children:
+          - id: connected-parts
+            text: ¿Qué partes están conectadas?
+          - id: relationship-kind
+            text: ¿Qué naturaleza tiene cada relación?
+          - id: relationship-direction
+            text: ¿Qué dirección tiene la relación?
+          - id: independent-existence
+            text: ¿De qué otras partes depende su existencia?
+          - id: relationship-cardinality
+            text: ¿Qué cardinalidad tiene la relación?
+
+      - id: composition
+        text: ¿Cómo se agrupan o contienen las partes?
+        children:
+          - id: containers
+            text: ¿Qué partes contienen otras?
+          - id: groups
+            text: ¿Qué partes pertenecen al mismo grupo?
+          - id: composition-levels
+            text: ¿Qué niveles de composición existen?
+          - id: membership-criterion
+            text: ¿Qué criterio determina la pertenencia?
+
+      - id: topology
+        text: ¿Qué forma estructural emerge?
+        children:
+          - id: hierarchy
+            text: ¿Qué jerarquías existen?
+          - id: cycles
+            text: ¿Qué ciclos existen?
+          - id: structural-centers
+            text: ¿Qué puntos son estructuralmente centrales?
+
+      - id: ordering
+        text: ¿Qué orden existe entre las partes?
+        children:
+          - id: before-after
+            text: ¿Qué debe aparecer antes o después?
+          - id: parallelism
+            text: ¿Qué puede existir en paralelo?
+          - id: order-independence
+            text: ¿Qué puede aparecer en cualquier orden?
+          - id: branch-points
+            text: ¿Dónde existen bifurcaciones?
+          - id: convergence-points
+            text: ¿Dónde existen convergencias?
+
+      - id: organization-criterion
+        text: ¿Por qué se organiza de esta forma?
+        children:
+          - id: separation-criterion
+            text: ¿Qué criterio separa las partes?
+          - id: grouping-criterion
+            text: ¿Qué criterio las agrupa?
+          - id: relationship-criterion
+            text: ¿Qué criterio determina sus relaciones?
+          - id: preserved-organization-property
+            text: ¿Qué propiedad de la organización buscamos preservar?
+
+      - id: structural-function
+        text: ¿Qué papel cumple cada parte dentro de la estructura?
+        children:
+          - id: structural-position
+            text: ¿Qué posición ocupa?
+          - id: connects
+            text: ¿Qué conecta?
+          - id: contains
+            text: ¿Qué contiene?
+          - id: exposes
+            text: ¿Qué expone?
+          - id: separates
+            text: ¿Qué separa?
+          - id: removal-impact
+            text: ¿Qué cambiaría estructuralmente si desapareciera?
+
+      - id: boundaries
+        text: ¿Cuáles son las fronteras de esta estructura?
+        children:
+          - id: belonging-elements
+            text: ¿Qué elementos pertenecen a ella?
+          - id: external-related-elements
+            text: ¿Qué elementos se relacionan con ella sin pertenecerle?
+          - id: significant-boundaries
+            text: ¿Dónde existe una frontera estructural significativa?
+
+      - id: variants
+        text: ¿Qué variantes estructurales existen?
+        children:
+          - id: variant-parts
+            text: ¿Qué partes cambian?
+          - id: variant-relationships
+            text: ¿Qué relaciones cambian?
+          - id: invariant-structure
+            text: ¿Qué permanece igual?
+          - id: variant-conditions
+            text: ¿Bajo qué condiciones aparece cada variante?
+
+      - id: extensions
+        text: ¿Dónde admite extensión esta estructura?
+        children:
+          - id: extension-points
+            text: ¿Qué puntos permiten incorporar nuevas partes?
+          - id: extension-integration
+            text: ¿Cómo se integrarían?
+          - id: preserved-relationships
+            text: ¿Qué relaciones estructurales deberían conservarse?
+
+      - id: structural-tensions
+        text: ¿Qué tensiones estructurales existen?
+        children:
+          - id: strong-coupling
+            text: ¿Qué partes están fuertemente acopladas?
+          - id: circular-dependencies
+            text: ¿Qué dependencias circulares generan tensión estructural?
+          - id: ambiguous-boundaries
+            text: ¿Dónde una frontera es ambigua?
+          - id: overlapping-parts
+            text: ¿Qué partes se solapan?
+          - id: unclear-relationships
+            text: ¿Qué relaciones son difíciles de interpretar?
+
+      - id: assumptions
+        text: ¿Qué estamos asumiendo sobre esta estructura?
+        children:
+          - id: structural-assumption
+            text: ¿Qué supuesto estructural estamos haciendo?
+          - id: assumption-justification
+            text: ¿Por qué lo aceptamos?
+          - id: assumption-dependency
+            text: ¿Qué parte del modelo depende de él?
+          - id: assumption-falsification-impact
+            text: ¿Qué cambiaría si fuera falso?
+
+      - id: structural-obsolescence
+        text: ¿Cuándo deja esta estructura de representar correctamente al target?
+        children:
+          - id: invalidating-changes
+            text: ¿Qué cambios invalidarían partes del modelo?
+          - id: changing-relationships
+            text: ¿Qué relaciones podrían cambiar?
+          - id: appearing-or-disappearing-parts
+            text: ¿Qué partes podrían aparecer o desaparecer?
+          - id: obsolescence-signals
+            text: ¿Qué señales indicarían que la estructura quedó desactualizada?

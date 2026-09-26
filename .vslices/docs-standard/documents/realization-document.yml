@@ -1,0 +1,9 @@
+kind: vslices-document-definition
+version: 0.1
+
+document:
+  type: realization
+
+  question:
+    id: realization
+    text: ¿Cómo se realiza?

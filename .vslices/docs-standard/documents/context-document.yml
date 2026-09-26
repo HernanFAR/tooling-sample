@@ -1,0 +1,157 @@
+kind: vslices-document-definition
+version: 0.1
+
+document:
+  type: context
+  scopes:
+    - concept
+    - process
+    - flow
+    - feature
+    - capability
+    - initiative
+    - product
+    - service
+    - project
+    - organization
+    - domain-context
+    - decision
+    - artifact
+    - system
+    - operation
+    - integration
+    - change
+
+  question:
+    id: context
+    text: ¿Dónde existe?
+    children:
+      - id: situation
+        text: ¿En qué situación aparece?
+        children:
+          - id: circumstances
+            text: ¿Bajo qué circunstancias aparece?
+          - id: moment-or-stage
+            text: ¿En qué momento o etapa aparece?
+
+      - id: contextual-importance
+        text: ¿Por qué importa entender este contexto?
+        children:
+          - id: preserved-interpretation
+            text: ¿Qué necesitamos poder interpretar correctamente?
+          - id: possible-misinterpretation
+            text: ¿Qué podría malinterpretarse sin este contexto?
+          - id: misinterpretation-consequence
+            text: ¿Qué consecuencias tendría esa interpretación incorrecta?
+          - id: dependent-decisions
+            text: ¿Qué decisiones dependen de entenderlo correctamente?
+
+      - id: current-situation
+        text: ¿Cuál es la situación actual?
+        children:
+          - id: current-conditions
+            text: ¿Qué condiciones existen actualmente?
+          - id: tensions-or-frictions
+            text: ¿Qué tensiones o fricciones existen?
+          - id: recent-changes
+            text: ¿Qué ha cambiado recientemente?
+          - id: stable-elements
+            text: ¿Qué permanece estable?
+
+      - id: relevant-elements
+        text: ¿Qué elementos del contexto son relevantes?
+        children:
+          - id: actors
+            text: ¿Qué actores participan o se ven afectados?
+          - id: systems-or-tools
+            text: ¿Qué sistemas o herramientas intervienen?
+          - id: processes-or-activities
+            text: ¿Qué procesos o actividades intervienen?
+          - id: artifacts-or-information-sources
+            text: ¿Qué artifacts o fuentes de información intervienen?
+          - id: relevant-environment
+            text: ¿Qué condiciones del entorno físico, organizacional o técnico influyen en este contexto?
+
+      - id: perspective
+        text: ¿Desde qué perspectiva observamos este contexto?
+        children:
+          - id: observer
+            text: ¿Quién está observando o interpretando?
+          - id: observable-context
+            text: ¿Qué parte del contexto es observable desde esta perspectiva?
+          - id: unknown-context
+            text: ¿Qué parte del contexto puede quedar fuera de esta perspectiva?
+          - id: alternative-perspectives
+            text: ¿Cómo cambiaría la interpretación desde otra perspectiva?
+
+      - id: contextual-applicability
+        text: ¿En qué condiciones este contexto es aplicable?
+        children:
+          - id: representative-where
+            text: ¿Dónde es representativo?
+          - id: representative-limit
+            text: ¿Dónde deja de ser representativo?
+          - id: known-exceptions
+            text: ¿Qué excepciones conocidas existen?
+          - id: uncertain-boundaries
+            text: ¿Qué fronteras siguen siendo inciertas?
+
+      - id: background
+        text: ¿Qué antecedentes explican el contexto actual?
+        children:
+          - id: relevant-prior-facts
+            text: ¿Qué hechos previos siguen siendo relevantes?
+          - id: prior-changes
+            text: ¿Qué cambios llevaron a la situación actual?
+          - id: prior-decisions
+            text: ¿Qué decisiones previas condicionan este contexto?
+          - id: irrelevant-background
+            text: ¿Qué antecedentes podrían parecer relevantes pero ya no condicionan el contexto actual?
+
+      - id: knowledge-basis
+        text: ¿En qué conocimiento se basa este contexto?
+        children:
+          - id: supporting-observations
+            text: ¿Qué observaciones lo sostienen?
+          - id: supporting-sources
+            text: ¿Qué fuentes lo sostienen?
+          - id: interpreted-knowledge
+            text: ¿Qué parte proviene de interpretación?
+          - id: pending-corroboration
+            text: ¿Qué parte todavía no está corroborada?
+
+      - id: assumptions
+        text: ¿Qué estamos asumiendo como cierto?
+        children:
+          - id: explicit-assumption
+            text: ¿Qué supuesto estamos haciendo?
+          - id: assumption-justification
+            text: ¿Por qué lo estamos aceptando?
+          - id: assumption-confidence
+            text: ¿Qué incertidumbre conserva este supuesto?
+          - id: assumption-dependencies
+            text: ¿Qué depende de este supuesto?
+          - id: assumption-falsification-impact
+            text: ¿Qué cambiaría si fuera falso?
+
+      - id: unresolved-context
+        text: ¿Qué todavía no entendemos?
+        children:
+          - id: open-question
+            text: ¿Qué pregunta permanece abierta?
+          - id: uncertainty-reason
+            text: ¿Por qué todavía no podemos responderla?
+          - id: missing-evidence
+            text: ¿Qué evidencia faltaría?
+          - id: resolution-dependencies
+            text: ¿Qué depende de resolverla?
+          - id: unresolved-action-risk
+            text: ¿Qué riesgo existe si actuamos sin resolverla?
+
+      - id: contextual-obsolescence
+        text: ¿Qué condiciones volverían obsoleto este contexto?
+        children:
+          - id: change-conditions
+            text: ¿Qué condiciones podrían cambiar?
+          - id: obsolescence-signals
+            text: ¿Qué señales indicarían que dejó de ser representativo?

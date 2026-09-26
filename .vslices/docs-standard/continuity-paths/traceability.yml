@@ -1,0 +1,77 @@
+kind: vslices-continuity-path-definition
+version: 0.1
+
+continuity-path:
+  type: traceability
+
+  purpose: >
+    Preserva continuidad reconstructible entre el origen de un elemento, las
+    decisiones que lo transformaron y las superficies donde terminó materializándose.
+
+  recommended-traversal: >
+    Comenzar por el origen, seguir decisiones y artifacts que preservan intención,
+    ubicar la materialización resultante, incorporar feedback o validación, y
+    terminar reconstruyendo pendientes y evolución relevante.
+
+  question:
+    id: traceability
+    text: ¿De dónde viene esto, qué lo transformó y dónde terminó materializándose?
+
+    children:
+      - id: origin
+        text: ¿Cuál fue su origen?
+        connection:
+          text: se origina en
+        recommendations:
+          - document: context
+            role: Preserva el contexto y origen del elemento
+
+      - id: transformations
+        text: ¿Qué decisiones lo transformaron?
+        connection:
+          text: fue transformado por
+        recommendations:
+          - document: decision-record
+            role: Preserva decisiones que cambiaron su forma o dirección
+
+      - id: intent-artifacts
+        text: ¿Qué artifacts preservan su intención?
+        connection:
+          text: preserva su intención mediante
+        recommendations:
+          - document: context
+            role: Preserva conocimiento que explica la intención
+
+      - id: materialization
+        text: ¿Dónde se materializó?
+        connection:
+          text: se materializa en
+        recommendations:
+          - document: realization
+            role: Preserva cómo y dónde existe concretamente
+
+      - id: learning
+        text: ¿Qué validaciones o feedback cambiaron su forma?
+        connection:
+          text: fue corregido o confirmado por
+        recommendations:
+          - document: feedback
+            role: Preserva aprendizaje obtenido después de la materialización
+          - document: validation
+            role: Preserva evaluación frente a criterios relevantes
+
+      - id: unresolved
+        text: ¿Qué quedó pendiente, excluido o reemplazado?
+        connection:
+          text: dejó fuera
+        recommendations:
+          - document: scope
+            role: Preserva qué quedó dentro, fuera o pendiente
+
+      - id: relevant-evolution
+        text: ¿Qué evolución explica su estado actual?
+        connection:
+          text: llegó a su estado actual mediante
+        recommendations:
+          - document: update
+            role: Preserva las transiciones documentales que explican el estado actual

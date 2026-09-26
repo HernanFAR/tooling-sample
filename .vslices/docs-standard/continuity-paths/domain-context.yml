@@ -1,0 +1,69 @@
+kind: vslices-continuity-path-definition
+version: 0.1
+
+continuity-path:
+  type: domain-context
+
+  purpose: >
+    Preserva continuidad entre un contexto de dominio, su lenguaje, conceptos,
+    comportamientos y las capacidades o realizaciones que dependen de ese significado.
+
+  recommended-traversal: >
+    Comenzar por el contexto, reconocer su lenguaje y conceptos, seguir sus
+    comportamientos y capacidades, y terminar observando qué productos,
+    servicios y decisiones dependen de esos significados.
+
+  question:
+    id: domain-context
+    text: ¿Qué lenguaje, conceptos, reglas y comportamientos pertenecen a este contexto?
+
+    children:
+      - id: domain-language
+        text: ¿Qué lenguaje pertenece a este contexto?
+        connection:
+          text: se expresa mediante
+        recommendations:
+          - document: domain-vocabulary
+            role: Preserva los términos y significados propios del contexto
+
+      - id: domain-concepts
+        text: ¿Qué conceptos abarca?
+        connection:
+          text: contiene
+        recommendations:
+          - document: domain-vocabulary
+            role: Preserva los conceptos incluidos en el contexto
+          - document: consistency
+            role: Preserva reglas o invariantes que deben mantenerse coherentes
+
+      - id: domain-behaviors
+        text: ¿Qué comportamientos expresa?
+        connection:
+          text: se manifiesta mediante
+        recommendations:
+          - document: behavior
+            role: Preserva los comportamientos propios del contexto
+
+      - id: domain-capabilities
+        text: ¿Qué capacidades nacen desde este dominio?
+        connection:
+          text: habilita
+        recommendations:
+          - nexus: capability
+            role: Compone las perspectivas necesarias para comprender una capacidad nacida del dominio
+
+      - id: domain-consumers
+        text: ¿Qué productos o servicios usan este significado?
+        connection:
+          text: es utilizado por
+        recommendations:
+          - document: context
+            role: Preserva dónde se utiliza el significado del dominio
+
+      - id: context-boundaries
+        text: ¿Qué decisiones delimitan este contexto?
+        connection:
+          text: está delimitado por
+        recommendations:
+          - document: decision-record
+            role: Preserva las decisiones que explican los límites del contexto

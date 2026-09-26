@@ -1,6 +1,11 @@
 version: 0.1
 targets:
   default: csharp
+documents:
+  template: markdown.question-tree
+docs-standard:
+  source: https://github.com/vslices/docs-standard
+  ref: main
 lineage:
   bootstrap:
     convention: existing-materialization

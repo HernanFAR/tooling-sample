@@ -1,0 +1,70 @@
+kind: vslices-continuity-path-definition
+version: 0.1
+
+continuity-path:
+  type: client-product
+
+  purpose: >
+    Preserva continuidad entre un producto visible para clientes o usuarios,
+    el escenario al que responde y el aprendizaje que confirma o modifica su
+    experiencia.
+
+  recommended-traversal: >
+    Comenzar por el producto, conectarlo con el escenario que responde, seguir
+    actores y flujos visibles, observar los servicios que coordina, y terminar
+    en decisiones y feedback que explican su forma actual.
+
+  question:
+    id: client-product
+    text: ¿Qué experiencia visible ofrece este producto y qué aprendizaje la cambia o confirma?
+
+    children:
+      - id: addressed-scenario
+        text: ¿Qué parte del escenario responde?
+        connection:
+          text: responde a
+        recommendations:
+          - document: context
+            role: Preserva el escenario al que responde el producto
+
+      - id: actors
+        text: ¿Qué actores interactúan con la experiencia?
+        connection:
+          text: es utilizado por
+        recommendations:
+          - document: context
+            role: Preserva quién interactúa con la experiencia
+
+      - id: visible-flows
+        text: ¿Qué flujos visibles permite recorrer?
+        connection:
+          text: ofrece
+        recommendations:
+          - document: behavior
+            role: Preserva el comportamiento visible del recorrido
+
+      - id: consumed-services
+        text: ¿Qué servicios consumibles necesita coordinar?
+        connection:
+          text: depende de
+        recommendations:
+          - nexus: service-consumption
+            role: Organiza las perspectivas necesarias para comprender el consumo del servicio
+
+      - id: product-decisions
+        text: ¿Qué decisiones explican su alcance o experiencia?
+        connection:
+          text: está delimitado por
+        recommendations:
+          - document: decision-record
+            role: Preserva por qué el producto ofrece, omite o limita partes de la experiencia
+
+      - id: product-feedback
+        text: ¿Qué feedback o validación cambió su comprensión?
+        connection:
+          text: evoluciona por
+        recommendations:
+          - document: feedback
+            role: Preserva aprendizaje obtenido desde uso o respuesta externa
+          - document: validation
+            role: Preserva la evaluación que confirmó o corrigió la representación

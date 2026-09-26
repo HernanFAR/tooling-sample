@@ -1,0 +1,67 @@
+kind: vslices-continuity-path-definition
+version: 0.1
+
+continuity-path:
+  type: ownership
+
+  purpose: >
+    Preserva continuidad sobre quién entiende, decide, valida, mantiene u opera
+    un elemento y qué cambia cuando esas responsabilidades se mueven.
+
+  recommended-traversal: >
+    Comenzar por el elemento seguido, identificar responsables de conocimiento,
+    decisión, validación y operación, reconocer conocimiento tácito y terminar
+    observando el impacto de mover responsabilidades.
+
+  question:
+    id: ownership
+    text: ¿Quién entiende, decide, valida, mantiene u opera esto?
+
+    children:
+      - id: knowledge-owner
+        text: ¿Quién lo entiende?
+        connection:
+          text: es entendido por
+        recommendations:
+          - document: context
+            role: Preserva contexto sobre quién posee el conocimiento relevante
+
+      - id: decision-owner
+        text: ¿Quién decide sobre esto?
+        connection:
+          text: es decidido por
+        recommendations:
+          - document: decision-record
+            role: Preserva decisiones y la autoridad que las produjo
+
+      - id: validation-owner
+        text: ¿Quién lo valida?
+        connection:
+          text: es validado por
+        recommendations:
+          - document: validation
+            role: Preserva cómo se determina que la representación sigue siendo válida
+
+      - id: maintenance-owner
+        text: ¿Quién lo mantiene u opera?
+        connection:
+          text: es mantenido u operado por
+        recommendations:
+          - document: context
+            role: Preserva el contexto operativo de la responsabilidad
+
+      - id: tacit-knowledge
+        text: ¿Qué conocimiento depende de personas específicas?
+        connection:
+          text: depende de
+        recommendations:
+          - document: diagnostic
+            role: Preserva el riesgo o fragilidad producido por conocimiento concentrado
+
+      - id: ownership-change
+        text: ¿Qué cambia si la responsabilidad se mueve?
+        connection:
+          text: cambia al mover
+        recommendations:
+          - document: diagnostic
+            role: Preserva consecuencias o fragilidades producidas por el cambio de responsabilidad

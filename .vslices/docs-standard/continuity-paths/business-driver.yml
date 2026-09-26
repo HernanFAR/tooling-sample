@@ -1,0 +1,59 @@
+kind: vslices-continuity-path-definition
+version: 0.1
+
+continuity-path:
+  type: business-driver
+
+  purpose: >
+    Preserva continuidad entre un elemento y la situación de negocio que lo
+    origina, justifica o condiciona.
+
+  recommended-traversal: >
+    Comenzar por la motivación de negocio, ubicar la situación donde aparece,
+    seguir la necesidad, dolor u oportunidad, reconocer consecuencias y
+    restricciones, y terminar en las decisiones o iniciativas que se justifican.
+
+  question:
+    id: business-driver
+    text: ¿Qué situación de negocio origina, justifica o condiciona esto?
+
+    children:
+      - id: originating-situation
+        text: ¿Qué situación de negocio lo origina?
+        connection:
+          text: se origina en
+        recommendations:
+          - document: context
+            role: Preserva el contexto donde aparece la motivación
+
+      - id: business-need
+        text: ¿Qué dolor, necesidad u oportunidad intenta responder?
+        connection:
+          text: responde a
+        recommendations:
+          - document: context
+            role: Preserva la necesidad, dolor u oportunidad en su contexto
+
+      - id: business-consequence
+        text: ¿Qué consecuencia aparece si no se atiende?
+        connection:
+          text: evita o mitiga
+        recommendations:
+          - document: diagnostic
+            role: Ayuda a preservar la consecuencia, riesgo o fragilidad observada
+
+      - id: business-constraint
+        text: ¿Qué restricción condiciona la respuesta?
+        connection:
+          text: está condicionado por
+        recommendations:
+          - document: constraint
+            role: Preserva la restricción que condiciona posibles respuestas
+
+      - id: justified-response
+        text: ¿Qué decisión o iniciativa se justifica por esto?
+        connection:
+          text: justifica
+        recommendations:
+          - document: decision-record
+            role: Preserva la decisión y su justificación

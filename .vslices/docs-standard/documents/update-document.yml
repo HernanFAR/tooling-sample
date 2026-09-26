@@ -1,0 +1,60 @@
+kind: vslices-document-definition
+version: 0.1
+
+document:
+  type: update
+  scopes:
+    - document
+
+  question:
+    id: update
+    text: ¿Qué cambia?
+    children:
+      - id: update-origin
+        text: ¿Qué conocimiento origina esta actualización?
+        children:
+          - id: understanding-change
+            text: ¿Qué cambió en nuestro entendimiento?
+          - id: enabling-or-requiring-decision
+            text: ¿Qué decisión habilita o requiere este cambio?
+          - id: divergence-to-reconcile
+            text: ¿Qué divergencia necesita reconciliarse?
+          - id: new-evidence
+            text: ¿Qué nueva evidencia hizo necesario el cambio?
+          - id: preserved-justification
+            text: ¿Dónde está preservada la justificación completa?
+
+      - id: semantic-update-unit
+        text: ¿Qué hace que estos cambios formen una misma actualización?
+        children:
+          - id: shared-semantic-change
+            text: ¿Qué cambio semántico común expresan?
+          - id: change-relationships
+            text: ¿Qué relación existe entre los cambios?
+          - id: change-dependencies
+            text: ¿Qué cambios dependen de otros?
+          - id: shared-consistency
+            text: ¿Qué debe mantenerse consistente entre ellos?
+          - id: split-semantic-breakage
+            text: ¿Qué se rompería semánticamente si se separaran?
+          - id: outside-unit
+            text: ¿Qué cambios no pertenecen a esta unidad?
+
+      - id: affected-documents
+        text: ¿Qué Documents afecta esta actualización?
+        children:
+          - id: affected-document
+            text: ¿Qué Document estamos actualizando?
+            children:
+              - id: affected-questions
+                text: ¿Qué preguntas deben actualizarse?
+                children:
+                  - id: affected-question
+                    text: ¿Qué pregunta estamos actualizando?
+                    children:
+                      - id: question-update-reason
+                        text: ¿Por qué debe actualizarse esta pregunta?
+                      - id: answer-before
+                        text: ¿Cuál es la respuesta anterior?
+                      - id: answer-after
+                        text: ¿Cuál es la respuesta resultante?
