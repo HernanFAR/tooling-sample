@@ -6,5 +6,6 @@ lineage:
     convention: existing-materialization
 updates:
   source: https://github.com/vslices/tooling
-  channel: preview
+  channel: build
+  pull-request: 10
 ...
