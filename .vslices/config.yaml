@@ -6,6 +6,9 @@ documents:
 docs-standard:
   source: https://github.com/vslices/docs-standard
   ref: main
+template-standard:
+  source: https://github.com/vslices/template-standard
+  ref: main
 lineage:
   bootstrap:
     convention: existing-materialization
