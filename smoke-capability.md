@@ -22,6 +22,11 @@ metadata:
       role: "Define los límites de la capacidad"
       recommendation: "1"
       recommendation-context: "2779D77A8CD1C355D34B16DAD4C2C6FBFB0CABBE0E2C739C152F02A542B24F60"
+    - relation: related
+      target: smoke-arbitrary-context.md
+      kind: document
+      type: context
+      role: "Preserva contexto arbitrario del smoke"
 
 tooling:
   version: build10.1130
@@ -41,5 +46,6 @@ tooling:
 | --- | --- | --- |
 | smoke-capability-behavior | Explica qué debe ocurrir al ejercer la capacidad | [smoke-capability-behavior.md](smoke-capability-behavior.md) |
 | smoke-capability-scope | Define los límites de la capacidad | [smoke-capability-scope.md](smoke-capability-scope.md) |
+| smoke-arbitrary-context | Preserva contexto arbitrario del smoke | [smoke-arbitrary-context.md](smoke-arbitrary-context.md) |
 <!-- /vslices:associated-artifacts -->
 
