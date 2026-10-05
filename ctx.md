@@ -7,7 +7,6 @@ artifact:
 metadata:
   status: draft
   tags:
-    - serviu
     - payment-request
   relates: []
 
