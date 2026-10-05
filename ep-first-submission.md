@@ -21,9 +21,11 @@ tooling:
 
 ## ¿Qué estamos esbozando?
 <!-- vslices:support-note-question id=draft -->
+Reconstruccion actual del flujo
 <!-- /vslices:support-note-question -->
 
 ### ¿Qué sigue abierto?
 <!-- vslices:support-note-question id=open -->
+confirmaciones instituciones aún pendientes
 <!-- /vslices:support-note-question -->
 
