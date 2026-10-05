@@ -1,0 +1,12 @@
+kind: vslices-support-note-definition
+version: 0.1
+
+support-note:
+  type: validation
+
+  question:
+    id: validation
+    text: ¿Qué significa lo obtenido frente a un criterio?
+    children:
+      - id: criterion
+        text: ¿Qué criterio estamos usando?

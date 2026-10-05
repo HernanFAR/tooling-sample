@@ -18,3 +18,9 @@ documents:
   - documents/drift-document.yml
   - documents/diagnostic-document.yml
   - documents/validation-document.yml
+
+support-notes:
+  - support-notes/draft.yml
+  - support-notes/result.yml
+  - support-notes/validation.yml
+  - support-notes/risk.yml

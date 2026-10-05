@@ -1,0 +1,12 @@
+kind: vslices-support-note-definition
+version: 0.1
+
+support-note:
+  type: draft
+
+  question:
+    id: draft
+    text: ¿Qué estamos esbozando?
+    children:
+      - id: open
+        text: ¿Qué sigue abierto?

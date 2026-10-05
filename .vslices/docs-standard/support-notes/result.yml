@@ -1,0 +1,12 @@
+kind: vslices-support-note-definition
+version: 0.1
+
+support-note:
+  type: result
+
+  question:
+    id: result
+    text: ¿Qué obtuvimos?
+    children:
+      - id: conditions
+        text: ¿Bajo qué condiciones lo obtuvimos?

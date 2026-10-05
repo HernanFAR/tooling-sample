@@ -15,5 +15,5 @@ lineage:
 updates:
   source: https://github.com/vslices/tooling
   channel: build
-  pull-request: 10
+  pull-request: 14
 ...
