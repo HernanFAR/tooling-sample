@@ -9,6 +9,8 @@ metadata:
   tags:
     - serviu
     - payment-request
+    - migration
+    - legacy
   relates: []
 
 tooling:
