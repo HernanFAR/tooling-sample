@@ -1,16 +1,16 @@
 ---
 artifact:
   kind: support-note
-  type: result
+  type: validation
   target: "Validación de avances legacy"
 
 metadata:
   status: draft
   relates:
     - relation: related
-      target: advance-validation.md
+      target: advance-result.md
       kind: support-note
-      type: validation
+      type: result
       role: "Interpreta este resultado frente al criterio objetivo"
 
 tooling:
@@ -22,13 +22,13 @@ tooling:
     version: "0.1.0"
 ---
 
-# Nota de soporte — result — Validación de avances legacy
+# Nota de soporte — validation — Validación de avances legacy
 
-## ¿Qué obtuvimos?
-<!-- vslices:support-note-question id=result -->
+## ¿Qué significa lo obtenido frente a un criterio?
+<!-- vslices:support-note-question id=validation -->
 <!-- /vslices:support-note-question -->
 
-### ¿Bajo qué condiciones lo obtuvimos?
-<!-- vslices:support-note-question id=conditions -->
+### ¿Qué criterio estamos usando?
+<!-- vslices:support-note-question id=criterion -->
 <!-- /vslices:support-note-question -->
 
