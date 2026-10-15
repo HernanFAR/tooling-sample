@@ -1,0 +1,8 @@
+version: 0.1
+standards:
+- name: vslices
+  declared-name: vslices
+  local: false
+  source: https://github.com/vslices/ruleset-standard
+  ref: main
+...
