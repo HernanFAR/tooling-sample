@@ -1,6 +1,9 @@
 version: 0.1
 targets:
   default: csharp
+template-standard:
+  source: https://github.com/vslices/template-standard
+  ref: main
 lineage:
   bootstrap:
     convention: existing-materialization

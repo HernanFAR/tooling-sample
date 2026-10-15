@@ -1,0 +1,5 @@
+kind: vslices-template-standard
+version: 0.1
+
+templates:
+  - templates/markdown/question-tree.yaml

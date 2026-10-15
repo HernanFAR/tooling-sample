@@ -1,0 +1,69 @@
+kind: vslices-materialization-template
+version: 0.1
+
+template:
+  id: markdown.question-tree
+  artifact-kind: document
+  media-type: text/markdown
+
+authority:
+  semantics: docs-standard
+  materialization: template-standard
+
+representation:
+  artifact:
+    identity:
+      source: front-matter
+
+  question:
+    presentation:
+      kind: heading
+      text:
+        source: question.text
+      level:
+        strategy: semantic-depth
+        root: 1
+
+    answer:
+      region:
+        starts: after-question-heading
+        ends: before-next-materialized-question-heading
+      empty: unanswered
+      multiple:
+        strategy: marked-instances
+        scoped:
+          strategy: parent-answer-instance-marker
+
+    scoped-child:
+      strategy: parent-answer-instance-marker
+
+reconstruction:
+  question-identity:
+    root:
+      strategy: document-type-root-question
+    descendants:
+      strategy: unique-child-from-parent
+    ambiguous: reject
+
+  answer:
+    significant-content:
+      excludes:
+        - blank-lines
+
+  answer-instance:
+    strategy: explicit-marker
+    scope:
+      strategy: optional-parent-answer-instance-marker
+
+  scoped-question:
+    strategy: explicit-parent-answer-instance-marker
+
+constraints:
+  - heading-level is materialization, not semantic depth authority
+  - question-text is presentation, not durable question identity
+  - descendant identity must be structurally unique under the current question graph
+  - answer content must not introduce headings that collide with materialized question levels
+  - repeated answers use explicit materialization identity without defining semantic subject identity
+  - nested repeated answers preserve the outer AnswerInstance that scopes them
+  - children of repeated answers preserve their parent AnswerInstance in reconstruction metadata
+  - ambiguous reconstruction fails closed
