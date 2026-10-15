@@ -1,0 +1,10 @@
+version: 0.1
+targets:
+  default: csharp
+lineage:
+  bootstrap:
+    convention: existing-materialization
+updates:
+  source: https://github.com/vslices/tooling
+  channel: preview
+...
