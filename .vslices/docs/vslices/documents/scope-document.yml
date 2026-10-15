@@ -1,0 +1,9 @@
+kind: vslices-document-definition
+version: 0.1
+
+document:
+  type: scope
+
+  question:
+    id: scope
+    text: ¿Hasta dónde llega?

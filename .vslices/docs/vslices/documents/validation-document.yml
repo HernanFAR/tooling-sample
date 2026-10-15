@@ -1,0 +1,9 @@
+kind: vslices-document-definition
+version: 0.1
+
+document:
+  type: validation
+
+  question:
+    id: validation
+    text: ¿Sigue siendo válida esta representación?

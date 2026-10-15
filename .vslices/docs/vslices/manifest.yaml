@@ -1,0 +1,46 @@
+kind: vslices-docs-standard
+version: 0.1
+name: vslices
+
+documents:
+  - documents/context-document.yml
+  - documents/structure-document.yml
+  - documents/domain-vocabulary.yml
+  - documents/consistency-document.yml
+  - documents/update-document.yml
+  - documents/behavior-document.yml
+  - documents/decision-record.yml
+  - documents/feedback-document.yml
+  - documents/navigation-document.yml
+  - documents/scope-document.yml
+  - documents/viability-document.yml
+  - documents/constraint-document.yml
+  - documents/realization-document.yml
+  - documents/drift-document.yml
+  - documents/diagnostic-document.yml
+  - documents/validation-document.yml
+
+support-notes:
+  - support-notes/draft.yml
+  - support-notes/result.yml
+  - support-notes/validation.yml
+  - support-notes/risk.yml
+
+nexus:
+  - nexus/capability-nexus.yml
+  - nexus/service-consumption-nexus.yml
+
+continuity-paths:
+  - continuity-paths/business-driver.yml
+  - continuity-paths/business-scenario.yml
+  - continuity-paths/client-product.yml
+  - continuity-paths/consumable-service.yml
+  - continuity-paths/domain-context.yml
+  - continuity-paths/evolution.yml
+  - continuity-paths/impact.yml
+  - continuity-paths/knowledge-handoff.yml
+  - continuity-paths/ownership.yml
+  - continuity-paths/software-initiative.yml
+  - continuity-paths/software-project.yml
+  - continuity-paths/traceability.yml
+  - continuity-paths/viability.yml

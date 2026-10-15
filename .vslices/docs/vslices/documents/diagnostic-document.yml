@@ -1,0 +1,9 @@
+kind: vslices-document-definition
+version: 0.1
+
+document:
+  type: diagnostic
+
+  question:
+    id: diagnostic
+    text: ¿Qué tensión, fragilidad o contradicción revela lo que observamos?

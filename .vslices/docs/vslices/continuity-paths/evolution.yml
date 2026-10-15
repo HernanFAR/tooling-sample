@@ -1,0 +1,85 @@
+kind: vslices-continuity-path-definition
+version: 0.1
+
+continuity-path:
+  type: evolution
+
+  purpose: >
+    Preserva continuidad entre la intención de un elemento, los cambios que
+    atraviesa y el estado que resulta de su evolución.
+
+  recommended-traversal: >
+    Comenzar por la intención original, identificar qué cambió y por qué,
+    reconocer qué intención debe preservarse, seguir cambios de alcance y
+    actualizaciones, y terminar observando aprendizaje e impacto.
+
+  question:
+    id: evolution
+    text: ¿Cómo cambió esto sin perder su intención?
+
+    children:
+      - id: original-intent
+        text: ¿Cuál era su intención original?
+        connection:
+          text: parte de
+        recommendations:
+          - document: context
+            role: Preserva la intención y condiciones originales
+
+      - id: observed-change
+        text: ¿Qué cambió?
+        connection:
+          text: cambia mediante
+        recommendations:
+          - document: update
+            role: Preserva la transición semántica entre respuestas anteriores y resultantes
+
+      - id: change-reason
+        text: ¿Por qué cambió?
+        connection:
+          text: cambia porque
+        recommendations:
+          - document: decision-record
+            role: Preserva decisiones que justifican el cambio
+
+      - id: preserved-intent
+        text: ¿Qué intención debe preservarse?
+        connection:
+          text: preserva
+        recommendations:
+          - document: consistency
+            role: Preserva aquello que debe permanecer coherente durante el cambio
+
+      - id: scope-change
+        text: ¿Qué entra, sale o queda pendiente?
+        connection:
+          text: modifica el alcance de
+        recommendations:
+          - document: scope
+            role: Preserva inclusiones, exclusiones y límites resultantes
+
+      - id: required-update
+        text: ¿Qué debe actualizarse?
+        connection:
+          text: requiere actualizar
+        recommendations:
+          - document: update
+            role: Preserva qué respuestas documentales deben cambiar
+
+      - id: evolution-learning
+        text: ¿Qué aprendizaje confirma o corrige la evolución?
+        connection:
+          text: es confirmado o corregido por
+        recommendations:
+          - document: feedback
+            role: Preserva aprendizaje posterior al cambio
+          - document: validation
+            role: Preserva evaluación de la representación resultante
+
+      - id: evolution-impact
+        text: ¿Qué impacto genera el cambio?
+        connection:
+          text: afecta
+        recommendations:
+          - document: diagnostic
+            role: Preserva tensiones, fragilidades o consecuencias reveladas por el cambio

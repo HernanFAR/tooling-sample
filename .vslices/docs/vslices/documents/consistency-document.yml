@@ -1,0 +1,210 @@
+kind: vslices-document-definition
+version: 0.1
+
+document:
+  type: consistency
+  scopes:
+    - domain-context
+    - business-scenario
+    - work-line
+    - process
+    - workflow
+    - flow
+    - feature
+    - capability
+    - product
+    - service
+    - project
+    - organization
+    - system
+    - application
+    - component
+    - module
+    - operation
+    - integration
+
+  question:
+    id: consistency
+    text: ¿Qué debe mantenerse coherente?
+    children:
+      - id: consistency-unit
+        text: ¿Qué elementos deben considerarse en conjunto?
+        children:
+          - id: participating-elements
+            text: ¿Qué elementos participan?
+          - id: preserved-relationship
+            text: ¿Qué relaciones entre los elementos deben preservarse?
+          - id: independent-change
+            text: ¿Qué puede cambiar independientemente?
+          - id: joint-change
+            text: ¿Qué cambios requieren considerar al conjunto?
+          - id: consistency-boundary
+            text: ¿Dónde termina esta unidad de consistencia?
+
+      - id: invariants
+        text: ¿Qué debe mantenerse verdadero?
+        children:
+          - id: valid-states
+            text: ¿Qué estados son válidos?
+          - id: invalid-state-combinations
+            text: ¿Qué combinaciones de estados son inválidas?
+          - id: preserved-relations
+            text: ¿Qué relaciones deben preservarse?
+          - id: corresponding-values
+            text: ¿Qué valores deben corresponder?
+          - id: uniqueness
+            text: ¿Qué unicidades deben mantenerse?
+          - id: preserved-order
+            text: ¿Qué orden debe preservarse?
+          - id: never-valid-condition
+            text: ¿Qué condición nunca puede considerarse válida?
+
+      - id: consistency-rules
+        text: ¿Qué reglas sostienen esta consistencia?
+        children:
+          - id: rule-identity
+            text: ¿Qué regla estamos describiendo?
+          - id: protected-by-rule
+            text: ¿Qué parte de la consistencia protege esta regla?
+          - id: rule-dependencies
+            text: ¿De qué otras reglas depende?
+          - id: jointly-meaningful-rules
+            text: ¿Qué reglas sólo tienen sentido en conjunto?
+
+      - id: applicability
+        text: ¿Cuándo debe mantenerse esta consistencia?
+        children:
+          - id: applicable-situations
+            text: ¿En qué situaciones aplica?
+          - id: applicable-states
+            text: ¿En qué estados aplica?
+          - id: non-applicable-conditions
+            text: ¿Cuándo no aplica?
+          - id: explicit-exceptions
+            text: ¿Qué excepciones explícitas existen?
+
+      - id: temporal-consistency
+        text: ¿Cuándo debe existir la consistencia?
+        children:
+          - id: required-consistency-moments
+            text: ¿En qué momentos debe sostenerse la consistencia?
+          - id: tolerated-inconsistency-periods
+            text: ¿Qué períodos de inconsistencia son tolerables?
+          - id: restoration-deadline
+            text: ¿Cuándo debe haberse restaurado?
+
+      - id: observers
+        text: ¿Quién necesita observar un estado consistente?
+        children:
+          - id: observing-participants
+            text: ¿Qué participantes observan esta unidad?
+          - id: tolerated-observation-differences
+            text: ¿Qué diferencias entre observaciones son tolerables?
+            children:
+              - id: tolerated-state-differences
+                text: ¿Qué diferencias de estado pueden observar distintos participantes?
+              - id: tolerated-temporal-differences
+                text: ¿Qué diferencias temporales son tolerables?
+          - id: semantically-invalid-observation
+            text: ¿Qué observación sería semánticamente inválida?
+
+      - id: affecting-changes
+        text: ¿Qué cambios pueden afectar esta consistencia?
+        children:
+          - id: modifying-operations
+            text: ¿Qué operaciones modifican los elementos protegidos?
+          - id: concurrent-changes
+            text: ¿Qué cambios pueden ocurrir concurrentemente?
+          - id: boundary-crossing-changes
+            text: ¿Qué cambios atraviesan la frontera de consistencia?
+
+      - id: change-authority
+        text: ¿Quién tiene autoridad para modificar el estado coherente?
+        children:
+          - id: change-initiators
+            text: ¿Quién puede iniciar cambios?
+          - id: validity-authority
+            text: ¿Quién tiene autoridad para determinar si un cambio preserva la consistencia?
+          - id: authority-distribution
+            text: ¿Cómo se distribuye la autoridad sobre los cambios?
+            children:
+              - id: authority-over-parts
+                text: ¿Quién tiene autoridad sobre cada parte?
+              - id: authority-coordination
+                text: ¿Cómo se coordinan varias autoridades?
+              - id: authority-capabilities
+                text: ¿Qué cambios puede realizar cada autoridad?
+              - id: whole-unit-authority
+                text: ¿Qué cambios requieren autoridad sobre el conjunto?
+
+      - id: consistency-recognition
+        text: ¿Qué evidencia demuestra que la consistencia se mantiene?
+        children:
+          - id: observable-conditions
+            text: ¿Qué condiciones deben observarse?
+          - id: matching-relations
+            text: ¿Qué relaciones deben coincidir?
+          - id: sufficient-evidence-states
+            text: ¿Qué estado observado demuestra que la consistencia se mantiene?
+          - id: misleading-consistency-evidence
+            text: ¿Qué observaciones podrían parecer suficientes sin demostrar consistencia?
+
+      - id: inconsistency
+        text: ¿Qué evidencia demuestra una inconsistencia?
+        children:
+          - id: violated-rule
+            text: ¿Qué regla deja de cumplirse?
+          - id: incompatible-coexisting-states
+            text: ¿Qué estados incompatibles pueden coexistir?
+          - id: broken-relationship
+            text: ¿Qué relación deja de sostenerse?
+          - id: revealing-observation
+            text: ¿Qué observación revela la inconsistencia?
+          - id: partial-inconsistency
+            text: ¿Qué partes pueden quedar inconsistentes sin invalidar toda la unidad?
+
+      - id: consistency-importance
+        text: ¿Por qué importa preservar esta consistencia?
+        children:
+          - id: lost-meaning
+            text: ¿Qué significado se pierde si se rompe?
+          - id: unreliable-behavior
+            text: ¿Qué comportamiento deja de ser confiable?
+          - id: invalid-state-decisions
+            text: ¿Qué decisiones podrían tomarse sobre un estado inválido?
+          - id: dependent-guarantees
+            text: ¿Qué otras garantías dependen de ella?
+
+      - id: competing-changes
+        text: ¿Qué ocurre cuando varios cambios compiten?
+        children:
+          - id: conflicting-changes
+            text: ¿Qué cambios pueden entrar en conflicto?
+          - id: prevailing-state
+            text: ¿Qué estado debe prevalecer?
+          - id: conflict-recognition
+            text: ¿Cómo reconocemos el conflicto?
+          - id: preserved-after-conflict
+            text: ¿Qué debe seguir siendo verdadero después de resolver el conflicto?
+
+      - id: consistency-recovery
+        text: ¿Cómo debe recuperarse la consistencia?
+        children:
+          - id: restored-condition
+            text: ¿Qué condición debe volver a cumplirse?
+          - id: reconciliation-information
+            text: ¿Qué información permite reconciliar estados?
+          - id: acceptable-final-states
+            text: ¿Qué estados finales son aceptables?
+
+      - id: assumptions
+        text: ¿Qué estamos asumiendo para que esta consistencia sea válida?
+        children:
+          - id: supporting-assumption
+            text: ¿Qué supuesto sostiene la regla?
+          - id: assumption-dependent-part
+            text: ¿Qué parte depende de él?
+          - id: supporting-evidence
+            text: ¿Qué evidencia lo sostiene?
+          - id: falsification-impact
+            text: ¿Qué cambiaría si fuera falso?

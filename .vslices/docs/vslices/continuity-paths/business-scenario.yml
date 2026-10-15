@@ -1,0 +1,73 @@
+kind: vslices-continuity-path-definition
+version: 0.1
+
+continuity-path:
+  type: business-scenario
+
+  purpose: >
+    Preserva continuidad alrededor del escenario operativo donde ocurre el
+    trabajo y permite recorrerlo desde una visión amplia hacia elementos más
+    específicos.
+
+  recommended-traversal: >
+    Comenzar por el escenario, recorrer sus líneas de trabajo, seguir los
+    procesos de cada línea, observar los flujos de cada proceso y profundizar
+    finalmente en los comportamientos específicos cuando sea necesario.
+
+  question:
+    id: business-scenario
+    text: ¿Dónde ocurre el trabajo y qué elementos ayudan a entender este escenario?
+
+    children:
+      - id: work-lines
+        text: ¿Qué líneas de trabajo existen dentro del escenario?
+        connection:
+          text: se organiza en
+        recommendations:
+          - document: structure
+            role: Preserva cómo se organizan las líneas de trabajo
+
+        children:
+          - id: processes
+            text: ¿Qué procesos explican cómo opera esta línea?
+            connection:
+              text: opera mediante
+            recommendations:
+              - document: structure
+                role: Preserva cómo se organiza el proceso
+              - document: behavior
+                role: Preserva qué debe ocurrir dentro del proceso
+
+            children:
+              - id: flows
+                text: ¿Qué flujos muestran cómo avanza este proceso?
+                connection:
+                  text: se desarrolla mediante
+                recommendations:
+                  - document: behavior
+                    role: Preserva qué ocurre a lo largo del flujo
+
+                children:
+                  - id: specific-behaviors
+                    text: ¿Qué comportamientos específicos aparecen en este flujo?
+                    connection:
+                      text: contiene
+                    recommendations:
+                      - document: behavior
+                        role: Preserva el comportamiento específico descubierto
+
+          - id: work-line-complements
+            text: ¿Qué conceptos complementan esta línea de trabajo?
+            connection:
+              text: se complementa con
+            recommendations:
+              - document: context
+                role: Preserva contexto adicional relevante para la línea
+
+      - id: scenario-complements
+        text: ¿Qué conceptos complementan este escenario?
+        connection:
+          text: se complementa con
+        recommendations:
+          - document: context
+            role: Preserva contexto adicional relevante para el escenario

@@ -1,0 +1,12 @@
+kind: vslices-support-note-definition
+version: 0.1
+
+support-note:
+  type: risk
+
+  question:
+    id: risk
+    text: ¿Qué podría salir mal?
+    children:
+      - id: condition
+        text: ¿Bajo qué condición podría ocurrir?

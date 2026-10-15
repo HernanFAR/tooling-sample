@@ -1,0 +1,27 @@
+kind: vslices-nexus-definition
+version: 0.1
+
+nexus:
+  type: service-consumption
+
+  scopes:
+    - service
+
+  recommendations:
+    - document: structure
+      role: Explica cómo se organiza el modelo de consumo del servicio
+
+    - document: behavior
+      role: Explica qué debe ocurrir al consumir el servicio
+
+    - document: consistency
+      role: Explica qué reglas o garantías deben mantenerse durante el consumo
+
+    - document: scope
+      role: Define qué formas de consumo están dentro o fuera del alcance
+
+    - document: decision-record
+      role: Preserva las decisiones que explican la forma de consumo
+
+    - document: domain-vocabulary
+      role: Explica el significado de dominio expuesto por el servicio

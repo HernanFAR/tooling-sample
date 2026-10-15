@@ -1,0 +1,90 @@
+kind: vslices-continuity-path-definition
+version: 0.1
+
+continuity-path:
+  type: knowledge-handoff
+
+  purpose: >
+    Preserva continuidad cuando conocimiento relevante debe quedar disponible
+    para otras personas, roles o equipos bajo restricciones reales.
+
+  recommended-traversal: >
+    Comenzar por el conocimiento que debe transferirse, identificar receptores,
+    priorizar riesgos y tiempo disponible, preservar decisiones y criterios,
+    ubicar puntos técnicos y comportamientos críticos, y terminar dejando visibles
+    pendientes, incompletos y exclusiones.
+
+  question:
+    id: knowledge-handoff
+    text: ¿Qué conocimiento debe quedar disponible para que el equipo pueda continuar?
+
+    children:
+      - id: transferable-knowledge
+        text: ¿Qué conocimiento debe transferirse?
+        connection:
+          text: debe preservar
+        recommendations:
+          - document: context
+            role: Preserva el conocimiento y contexto que otros necesitan comprender
+
+      - id: receivers
+        text: ¿Quién necesita recibirlo?
+        connection:
+          text: debe quedar disponible para
+        recommendations:
+          - document: context
+            role: Preserva quién necesita recibir o sostener el conocimiento
+
+      - id: continuity-risk
+        text: ¿Qué riesgo aparece si no queda disponible?
+        connection:
+          text: evita el riesgo de
+        recommendations:
+          - document: diagnostic
+            role: Preserva el riesgo o fragilidad causado por perder el conocimiento
+
+      - id: time-priority
+        text: ¿Qué debe priorizarse por tiempo limitado?
+        connection:
+          text: prioriza
+        recommendations:
+          - document: viability
+            role: Preserva qué puede sostenerse dentro de las restricciones disponibles
+          - document: scope
+            role: Delimita qué entra y qué queda fuera del traspaso
+
+      - id: preserved-decisions
+        text: ¿Qué decisiones o criterios deben preservarse?
+        connection:
+          text: debe preservar
+        recommendations:
+          - document: decision-record
+            role: Preserva decisiones y criterios que explican la forma de trabajar
+          - document: consistency
+            role: Preserva reglas que deben mantenerse coherentes
+
+      - id: technical-entry-points
+        text: ¿Qué partes técnicas deben poder navegarse?
+        connection:
+          text: debe permitir navegar
+        recommendations:
+          - document: structure
+            role: Preserva la organización de las zonas técnicas relevantes
+
+      - id: relevant-behaviors
+        text: ¿Qué comportamientos deben entenderse?
+        connection:
+          text: debe permitir comprender
+        recommendations:
+          - document: behavior
+            role: Preserva qué debe ocurrir y cómo reconocer el comportamiento relevante
+
+      - id: pending-knowledge
+        text: ¿Qué queda pendiente, incompleto o fuera del traspaso?
+        connection:
+          text: deja explícitamente fuera o pendiente
+        recommendations:
+          - document: scope
+            role: Preserva exclusiones y límites del traspaso
+          - document: update
+            role: Preserva cambios documentales pendientes cuando corresponda

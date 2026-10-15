@@ -1,0 +1,27 @@
+kind: vslices-nexus-definition
+version: 0.1
+
+nexus:
+  type: capability
+
+  scopes:
+    - capability
+
+  recommendations:
+    - document: scope
+      role: Define los límites de la capacidad
+
+    - document: behavior
+      role: Explica qué debe ocurrir al ejercer la capacidad
+
+    - document: structure
+      role: Explica cómo se organiza la capacidad
+
+    - document: consistency
+      role: Explica qué debe mantenerse coherente dentro de la capacidad
+
+    - document: viability
+      role: Evalúa si la capacidad puede sostenerse
+
+    - document: decision-record
+      role: Preserva las decisiones que delimitan o justifican la capacidad

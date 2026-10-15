@@ -1,0 +1,9 @@
+kind: vslices-document-definition
+version: 0.1
+
+document:
+  type: behavior
+
+  question:
+    id: behavior
+    text: ¿Qué debe ocurrir?

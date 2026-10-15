@@ -1,0 +1,77 @@
+kind: vslices-continuity-path-definition
+version: 0.1
+
+continuity-path:
+  type: impact
+
+  purpose: >
+    Preserva continuidad entre un cambio o evento y los elementos que podrían
+    verse afectados por él.
+
+  recommended-traversal: >
+    Comenzar por la fuente del impacto y recorrer dominio, experiencia visible,
+    servicios, estructura técnica, decisiones, documentación y validaciones que
+    puedan necesitar revisión.
+
+  question:
+    id: impact
+    text: ¿Qué se ve afectado si esto cambia, falla, aparece, se elimina o evoluciona?
+
+    children:
+      - id: domain-impact
+        text: ¿Qué conceptos o reglas del dominio afecta?
+        connection:
+          text: afecta
+        recommendations:
+          - document: domain-vocabulary
+            role: Preserva cambios sobre conceptos y significados de dominio
+          - document: consistency
+            role: Preserva reglas o invariantes afectados
+
+      - id: product-impact
+        text: ¿Qué productos o flujos visibles afecta?
+        connection:
+          text: afecta
+        recommendations:
+          - document: behavior
+            role: Preserva cambios sobre comportamiento visible
+
+      - id: service-impact
+        text: ¿Qué servicios o formas de consumo afecta?
+        connection:
+          text: afecta
+        recommendations:
+          - nexus: service-consumption
+            role: Organiza las perspectivas de consumo potencialmente afectadas
+
+      - id: technical-impact
+        text: ¿Qué proyectos o estructuras técnicas afecta?
+        connection:
+          text: afecta
+        recommendations:
+          - document: structure
+            role: Preserva cambios sobre organización técnica
+
+      - id: decision-impact
+        text: ¿Qué decisiones deben revisarse?
+        connection:
+          text: obliga a revisar
+        recommendations:
+          - document: decision-record
+            role: Preserva decisiones cuya validez puede haber cambiado
+
+      - id: documentation-impact
+        text: ¿Qué documentación debe actualizarse?
+        connection:
+          text: requiere actualizar
+        recommendations:
+          - document: update
+            role: Preserva los cambios documentales requeridos
+
+      - id: validation-impact
+        text: ¿Qué validación necesita repetirse?
+        connection:
+          text: requiere revalidar
+        recommendations:
+          - document: validation
+            role: Preserva la nueva evaluación posterior al impacto
