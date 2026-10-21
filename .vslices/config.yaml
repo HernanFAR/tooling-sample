@@ -11,4 +11,5 @@ updates:
   source: https://github.com/vslices/tooling
   channel: build
   pull-request: 16
-...
+documents:
+  template: markdown.question-tree
