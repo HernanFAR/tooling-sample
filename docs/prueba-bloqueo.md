@@ -6,10 +6,15 @@ artifact:
 
 metadata:
   status: draft
-  relates: []
+  relates:
+    - relation: related
+      target: prueba-relacion-destino.md
+      kind: support-note
+      type: vslices.draft
+      role: Descripción
 
 tooling:
-  version: build16.1319
+  version: build16.1330
   schema:
     version: 0.1.0
   template:

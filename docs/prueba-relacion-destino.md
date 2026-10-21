@@ -12,9 +12,14 @@ metadata:
       kind: support-note
       type: vslices.draft
       role: "Complementa la exploración inicial"
+    - relation: related
+      target: prueba-bloqueo.md
+      kind: support-note
+      type: vslices.draft
+      role: Descripción
 
 tooling:
-  version: build16.1319
+  version: build16.1330
   schema:
     version: 0.1.0
   template:
