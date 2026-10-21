@@ -26,5 +26,10 @@ tooling:
 
 ## ¿Qué estamos esbozando?
 <!-- vslices:support-note-question id=draft -->
+Estamos verificando la creación y navegación de relaciones entre notas.
+<!-- /vslices:support-note-question -->
+
+### ¿Qué sigue abierto?
+<!-- vslices:support-note-question id=open -->
 <!-- /vslices:support-note-question -->
 
