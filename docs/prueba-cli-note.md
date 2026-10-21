@@ -21,5 +21,10 @@ tooling:
 
 ## ¿Qué estamos esbozando?
 <!-- vslices:support-note-question id=draft -->
+Estamos explorando el funcionamiento progresivo de las Support Notes.
+<!-- /vslices:support-note-question -->
+
+### ¿Qué sigue abierto?
+<!-- vslices:support-note-question id=open -->
 <!-- /vslices:support-note-question -->
 
