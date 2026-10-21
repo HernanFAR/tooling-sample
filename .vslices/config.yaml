@@ -1,6 +1,9 @@
 version: 0.1
 targets:
   default: csharp
+documents:
+  route: docs
+  template: markdown.question-tree
 template-standard:
   source: https://github.com/vslices/template-standard
   ref: main
@@ -11,5 +14,4 @@ updates:
   source: https://github.com/vslices/tooling
   channel: build
   pull-request: 16
-documents:
-  template: markdown.question-tree
+...
