@@ -9,7 +9,7 @@ metadata:
   relates: []
 
 tooling:
-  version: build16.1308
+  version: build16.1311
   schema:
     version: 0.1.0
   template:
@@ -21,6 +21,7 @@ tooling:
 
 ## ¿Qué estamos esbozando?
 <!-- vslices:support-note-question id=draft -->
+Estamos explorando un sistema de solicitudes para funcionarios.
 <!-- /vslices:support-note-question -->
 
 ### ¿Qué sigue abierto?
