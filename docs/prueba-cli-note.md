@@ -26,5 +26,6 @@ Estamos explorando el funcionamiento progresivo de las Support Notes.
 
 ### ¿Qué sigue abierto?
 <!-- vslices:support-note-question id=open -->
+Necesitamos verificar la navegación, actualización y materialización de preguntas.
 <!-- /vslices:support-note-question -->
 
