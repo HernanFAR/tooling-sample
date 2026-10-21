@@ -26,3 +26,9 @@ Sistema que permite gestionar solicitudes de funcionarios.
 <!-- vslices:question question=situation -->
 Los funcionarios pueden registrar y consultar solicitudes.
 <!-- /vslices:question -->
+
+### ¿Bajo qué circunstancias aparece?
+
+<!-- vslices:question question=circumstances -->
+Pueden crear solicitudes y revisar su estado.
+<!-- /vslices:question -->
