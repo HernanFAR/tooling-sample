@@ -20,3 +20,9 @@ tooling:
 # ¿Dónde existe?
 
 Sistema que permite gestionar solicitudes de funcionarios.
+
+## ¿En qué situación aparece?
+
+<!-- vslices:question question=situation -->
+Los funcionarios pueden registrar y consultar solicitudes.
+<!-- /vslices:question -->
