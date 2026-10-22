@@ -1,0 +1,8 @@
+﻿vslices.exe : DISC100: Document 'C:\Users\Hernan\source\VSlices\tooling-sample\prueba-nexus-capability\scope.md' does not exist.
+At C:\Users\Hernan\source\VSlices\tooling-sample\pruebas-nexus.ps1:20 char:15
++     $output = & vslices @Arguments 2>&1 | Out-String
++               ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DISC100: Docume...does not exist.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+

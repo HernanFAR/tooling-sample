@@ -1,0 +1,8 @@
+﻿vslices.exe : RELCLI002: Related artifact 'C:\Users\Hernan\source\VSlices\tooling-sample\docs\nexus-que-no-existe.md' does not exist.
+At C:\Users\Hernan\source\VSlices\tooling-sample\pruebas-nexus.ps1:20 char:15
++     $output = & vslices @Arguments 2>&1 | Out-String
++               ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (RELCLI002: Rela...does not exist.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+

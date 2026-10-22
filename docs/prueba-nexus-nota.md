@@ -2,16 +2,16 @@
 artifact:
   kind: support-note
   type: vslices.draft
-  target: "Prueba de disponibilidad"
+  target: "Observaciones sobre la capacidad"
 
 metadata:
   status: draft
   relates:
     - relation: related
-      target: prueba-relacion-destino.md
-      kind: support-note
-      type: vslices.draft
-      role: Descripción
+      target: "prueba-nexus-capability/README.md"
+      kind: nexus
+      type: vslices.capability
+      role: "Aporta observaciones complementarias"
 
 tooling:
   version: build16.1330
@@ -22,7 +22,7 @@ tooling:
     version: "0.1.0"
 ---
 
-# Nota de soporte — vslices.draft — Prueba de disponibilidad
+# Nota de soporte — vslices.draft — Observaciones sobre la capacidad
 
 ## ¿Qué estamos esbozando?
 <!-- vslices:support-note-question id=draft -->

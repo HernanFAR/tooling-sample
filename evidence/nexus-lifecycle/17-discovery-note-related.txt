@@ -1,0 +1,28 @@
+﻿Support Note:
+  path: docs\prueba-nexus-nota.md
+  type: vslices.draft
+  scope: <unset>
+  target: Observaciones sobre la capacidad
+  status: draft
+  tooling: build16.1330
+  tags: []
+  tag commands:
+    set: vslices update support-note prueba-nexus-nota --tags "<tag,...>"
+    add: vslices update support-note prueba-nexus-nota --add-tags "<tag,...>"
+    remove: vslices update support-note prueba-nexus-nota --remove-tags "<tag,...>"
+
+Discovery surface:
+Question tree:
+[root] ¿Qué estamos esbozando?
+
+[root] ¿Qué estamos esbozando?
+  kind: question
+  status: available
+  command: vslices update support-note prueba-nexus-nota --question-id root --answer "<answer>"
+
+Artifacts asociados:
+  artifact: prueba-nexus-capability/README.md
+    kind: nexus
+    role: Aporta observaciones complementarias
+    command: vslices discovery nexus C:\Users\Hernan\source\VSlices\tooling-sample\docs\prueba-nexus-capability\README.md
+
