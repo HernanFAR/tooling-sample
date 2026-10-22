@@ -1,0 +1,8 @@
+﻿vslices.exe : STDCLI002: Did not find expected <document start>.
+At C:\Users\Hernan\source\VSlices\tooling-sample\pruebas-nexus.ps1:63 char:22
++     try { $output = (& vslices @CliArgs 2>&1 | Out-String); $exit = $ ...
++                      ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (STDCLI002: Did ...ocument start>.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+

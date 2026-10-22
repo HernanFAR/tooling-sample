@@ -1,6 +1,98 @@
-﻿{
-    "Test":  "01-version",
-    "ExitCode":  0,
-    "ExpectedFailure":  false,
-    "Passed":  true
-}
+﻿[
+    {
+        "Test":  "01-version",
+        "ExitCode":  0,
+        "ExpectedFailure":  false,
+        "Passed":  true
+    },
+    {
+        "Test":  "02-list-standards",
+        "ExitCode":  1,
+        "ExpectedFailure":  false,
+        "Passed":  false
+    },
+    {
+        "Test":  "03-create",
+        "ExitCode":  1,
+        "ExpectedFailure":  false,
+        "Passed":  false
+    },
+    {
+        "Test":  "04-discovery-initial",
+        "ExitCode":  1,
+        "ExpectedFailure":  false,
+        "Passed":  false
+    },
+    {
+        "Test":  "05-answer-root",
+        "ExitCode":  1,
+        "ExpectedFailure":  false,
+        "Passed":  false
+    },
+    {
+        "Test":  "06-answer-child",
+        "ExitCode":  1,
+        "ExpectedFailure":  false,
+        "Passed":  false
+    },
+    {
+        "Test":  "07-answer-grandchild",
+        "ExitCode":  1,
+        "ExpectedFailure":  false,
+        "Passed":  false
+    },
+    {
+        "Test":  "08-read-deep",
+        "ExitCode":  2,
+        "ExpectedFailure":  false,
+        "Passed":  false
+    },
+    {
+        "Test":  "09-discovery-answered",
+        "ExitCode":  1,
+        "ExpectedFailure":  false,
+        "Passed":  false
+    },
+    {
+        "Test":  "10-invalid-question",
+        "ExitCode":  1,
+        "ExpectedFailure":  true,
+        "Passed":  false
+    },
+    {
+        "Test":  "11-create-note",
+        "ExitCode":  1,
+        "ExpectedFailure":  false,
+        "Passed":  false
+    },
+    {
+        "Test":  "12-relate",
+        "ExitCode":  1,
+        "ExpectedFailure":  false,
+        "Passed":  false
+    },
+    {
+        "Test":  "13-read-deep-after-relate",
+        "ExitCode":  2,
+        "ExpectedFailure":  false,
+        "Passed":  false
+    },
+    {
+        "Test":  "14-discovery-after-relate",
+        "ExitCode":  1,
+        "ExpectedFailure":  false,
+        "Passed":  false
+    },
+    {
+        "Test":  "15-discovery-reciprocal",
+        "ExitCode":  1,
+        "ExpectedFailure":  false,
+        "Passed":  false
+    },
+    {
+        "Test":  "16-read-other-root",
+        "ExitCode":  2,
+        "ExpectedFailure":  false,
+        "Passed":  false
+    }
+]

@@ -1,0 +1,8 @@
+﻿vslices.exe : RELCLI002: Related artifact 'C:\Users\Hernan\source\VSlices\tooling-sample\docs\prueba-nexus-jerarquico-nota.md' does not exist.
+At C:\Users\Hernan\source\VSlices\tooling-sample\pruebas-nexus.ps1:63 char:22
++     try { $output = (& vslices @CliArgs 2>&1 | Out-String); $exit = $ ...
++                      ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (RELCLI002: Rela...does not exist.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+

@@ -1,0 +1,16 @@
+kind: vslices-nexus-definition
+version: 0.1
+nexus:
+  type: hierarchical-qa
+  scopes: [project]
+  questions:
+    - id: objective
+      text: Que buscamos comprobar?
+      children:
+        - id: evidence
+          text: Que evidencia respalda el objetivo?
+          children:
+            - id: limits
+              text: Que limites tiene la evidencia?
+    - id: tradeoff
+      text: Que decision queda abierta?
