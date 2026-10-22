@@ -33,7 +33,7 @@ function Test-VSlices {
 function Get-RecommendationDocumentPath {
     param([string]$Selection)
     $output = (& vslices discovery nexus $nexus 2>&1 | Out-String)
-    if ($LASTEXITCODE -ne 0) { throw "Cannot discover Nexus to resolve selection $Selection: $output" }
+    if ($LASTEXITCODE -ne 0) { throw "Cannot discover Nexus to resolve selection $Selection : $output" }
     $escaped = [regex]::Escape($Selection)
     $match = [regex]::Match($output, "(?ms)^\[$escaped\] document:.*?^\s+command:\s+vslices discovery document\s+([^\r\n]+)")
     if (-not $match.Success) { throw "No materialized Document found at Nexus selection $Selection" }
