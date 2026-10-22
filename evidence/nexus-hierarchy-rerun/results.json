@@ -1,0 +1,26 @@
+﻿[
+    {
+        "Test":  "01-version",
+        "ExitCode":  0,
+        "ExpectedFailure":  false,
+        "Passed":  true
+    },
+    {
+        "Test":  "02-list-standards",
+        "ExitCode":  0,
+        "ExpectedFailure":  false,
+        "Passed":  true
+    },
+    {
+        "Test":  "03-create",
+        "ExitCode":  0,
+        "ExpectedFailure":  false,
+        "Passed":  true
+    },
+    {
+        "Test":  "04-discovery-initial",
+        "ExitCode":  0,
+        "ExpectedFailure":  false,
+        "Passed":  false
+    }
+]

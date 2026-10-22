@@ -1,0 +1,30 @@
+Nexus:
+  path: docs\prueba-nexus-jerarquico\README.md
+  type: nexus-qa.hierarchical-qa
+  scope: project
+  target: Nexus hierarchical QA
+  status: draft
+  tooling: build16.1330
+  tags: []
+  tag commands:
+    set: vslices update nexus prueba-nexus-jerarquico --tags "<tag,...>"
+    add: vslices update nexus prueba-nexus-jerarquico --add-tags "<tag,...>"
+    remove: vslices update nexus prueba-nexus-jerarquico --remove-tags "<tag,...>"
+
+Discovery surface:
+Question tree:
+[1] Que buscamos comprobar?
+[2] Que decision queda abierta?
+
+[1] Que buscamos comprobar?
+  kind: question
+  status: available
+  command: vslices update nexus prueba-nexus-jerarquico --question-id 1 --answer "<answer>"
+
+[2] Que decision queda abierta?
+  kind: question
+  status: available
+  command: vslices update nexus prueba-nexus-jerarquico --question-id 2 --answer "<answer>"
+
+Artifacts asociados:
+  none

@@ -1,0 +1,3 @@
+Docs Standards:
+  nexus-qa [local] declared=nexus-qa source=C:\Users\Hernan\source\VSlices\tooling-sample\.vslices\docs\local\nexus-qa
+  vslices [managed] declared=vslices source=https://github.com/vslices/docs-standard ref=main
