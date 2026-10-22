@@ -1,11 +1,10 @@
-version: 0.1
+﻿version: 0.1
 standards:
-- name: vslices
-  declared-name: vslices
-  local: false
-  source: https://github.com/vslices/docs-standard
-  ref: main
-...
+  - name: vslices
+    declared-name: vslices
+    local: false
+    source: https://github.com/vslices/docs-standard
+    ref: main
   - name: nexus-qa
     declared-name: nexus-qa
-    local: 'true'
+    local: true
