@@ -1,0 +1,8 @@
+﻿vslices.exe : READ008: Question selection '1' is not available on this artifact. Run 'vslices discovery <family> <artifact>' to inspect current selections.
+At C:\Users\Hernan\source\VSlices\tooling-sample\pruebas-nexus.ps1:15 char:13
++   $output = & vslices @CliArgs 2>&1 | Out-String
++             ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (READ008: Questi...ent selections.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+

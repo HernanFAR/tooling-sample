@@ -1,0 +1,8 @@
+﻿vslices.exe : RELART020: Selection '1' is not an available question.
+At C:\Users\Hernan\source\VSlices\tooling-sample\pruebas-nexus.ps1:15 char:13
++   $output = & vslices @CliArgs 2>&1 | Out-String
++             ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (RELART020: Sele...lable question.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+

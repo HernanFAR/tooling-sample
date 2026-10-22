@@ -1,0 +1,56 @@
+﻿[
+    {
+        "Test":  "01-version",
+        "ExitCode":  0,
+        "ExpectedFailure":  false,
+        "Passed":  true
+    },
+    {
+        "Test":  "02-standards",
+        "ExitCode":  0,
+        "ExpectedFailure":  false,
+        "Passed":  true
+    },
+    {
+        "Test":  "03-create-nexus",
+        "ExitCode":  0,
+        "ExpectedFailure":  false,
+        "Passed":  true
+    },
+    {
+        "Test":  "04-discovery",
+        "ExitCode":  0,
+        "ExpectedFailure":  false,
+        "Passed":  true
+    },
+    {
+        "Test":  "05-read-recommendation-as-question",
+        "ExitCode":  2,
+        "ExpectedFailure":  true,
+        "Passed":  true
+    },
+    {
+        "Test":  "06-read-deep-recommendation-as-question",
+        "ExitCode":  2,
+        "ExpectedFailure":  true,
+        "Passed":  true
+    },
+    {
+        "Test":  "07-update-recommendation-as-question",
+        "ExitCode":  2,
+        "ExpectedFailure":  true,
+        "Passed":  true
+    },
+    {
+        "Test":  "08-read-invalid-question",
+        "ExitCode":  2,
+        "ExpectedFailure":  true,
+        "Passed":  true
+    },
+    {
+        "Test":  "09-no-mutation",
+        "ExitCode":  0,
+        "ExpectedFailure":  false,
+        "Passed":  true
+    }
+]
