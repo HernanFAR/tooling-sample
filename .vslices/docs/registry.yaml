@@ -6,3 +6,6 @@ standards:
   source: https://github.com/vslices/docs-standard
   ref: main
 ...
+  - name: nexus-qa
+    declared-name: nexus-qa
+    local: 'true'

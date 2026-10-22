@@ -15,26 +15,27 @@ $results = [System.Collections.Generic.List[object]]::new()
 
 if (-not (Test-Path '.vslices')) { throw 'Run this script from the root of tooling-sample.' }
 if (-not (Test-Path $registry)) { throw "Missing registry: $registry" }
-if (Test-Path $standardRoot) { throw "QA standard already exists: $standardRoot. Remove it only after inspecting prior results." }
+if (Test-Path $standardRoot) { Write-Host 'Reusing existing nexus-qa snapshot from previous attempt.' -ForegroundColor Yellow }
 if (Test-Path "docs/$nexus") { throw "Test Nexus already exists: docs/$nexus" }
 New-Item -ItemType Directory -Force $evidence, "$standardRoot/nexus" | Out-Null
 
 # Register a second, explicitly local standard, preserving the existing registry as-is.
 $registryOriginal = [System.IO.File]::ReadAllText((Resolve-Path $registry))
-if ($registryOriginal -match '(?m)^\s*-\s*name:\s*nexus-qa\s*$') { throw 'nexus-qa is already registered.' }
+$alreadyRegistered = ($registryOriginal -match '(?m)^\s*-\s*name:\s*nexus-qa\s*$')
 if ($registryOriginal -notmatch '(?m)^standards:\s*$') { throw 'Unrecognized docs registry shape; do not modify automatically.' }
 $registryUpdated = $registryOriginal.TrimEnd("`r", "`n") + "`n  - name: nexus-qa`n    declared-name: nexus-qa`n    local: 'true'`n"
 # This registry addition is intentional and remains local so the generated artifact remains readable.
-[System.IO.File]::WriteAllText((Resolve-Path $registry), $registryUpdated, [System.Text.UTF8Encoding]::new($false))
+if (-not $alreadyRegistered) { [System.IO.File]::WriteAllText((Resolve-Path $registry), $registryUpdated, [System.Text.UTF8Encoding]::new($false)) }
 
-@'
+$manifestSource = @'
 kind: vslices-docs-standard
 version: 0.1
 name: nexus-qa
 documents: []
-'@ | Set-Content "$standardRoot/manifest.yaml" -Encoding utf8
+'@
+[System.IO.File]::WriteAllText((Join-Path (Get-Location).Path "$standardRoot/manifest.yaml"), $manifestSource, [System.Text.UTF8Encoding]::new($false))
 
-@'
+$definitionSource = @'
 kind: vslices-nexus-definition
 version: 0.1
 nexus:
@@ -51,13 +52,16 @@ nexus:
               text: Que limites tiene la evidencia?
     - id: tradeoff
       text: Que decision queda abierta?
-'@ | Set-Content $definition -Encoding utf8
+'@
+[System.IO.File]::WriteAllText((Join-Path (Get-Location).Path $definition), $definitionSource, [System.Text.UTF8Encoding]::new($false))
 
 function Invoke-VSlicesTest {
     param([string]$Name, [string[]]$CliArgs, [bool]$ShouldFail = $false, [string]$Contains = '')
     Write-Host "`n=== $Name ===" -ForegroundColor Cyan
-    $output = (& vslices @CliArgs 2>&1 | Out-String)
-    $exit = $LASTEXITCODE
+    $previousPreference = $ErrorActionPreference
+    $ErrorActionPreference = 'Continue'
+    try { $output = (& vslices @CliArgs 2>&1 | Out-String); $exit = $LASTEXITCODE }
+    finally { $ErrorActionPreference = $previousPreference }
     $output | Set-Content "$evidence/$Name.txt" -Encoding utf8
     Write-Host $output
     $ok = if ($ShouldFail) { $exit -ne 0 } else { $exit -eq 0 }
