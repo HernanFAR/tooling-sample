@@ -1,3 +1,0 @@
-﻿Docs Standards:
-  vslices [managed] declared=vslices source=https://github.com/vslices/docs-standard ref=main
-

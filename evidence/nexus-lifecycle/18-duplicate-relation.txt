@@ -1,8 +1,0 @@
-﻿vslices.exe : RELATE004: An existing relationship already connects these artifacts. No files were modified.
-At C:\Users\Hernan\source\VSlices\tooling-sample\pruebas-nexus.ps1:20 char:15
-+     $output = & vslices @Arguments 2>&1 | Out-String
-+               ~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (RELATE004: An e... were modified.:String) [], RemoteException
-    + FullyQualifiedErrorId : NativeCommandError
- 
-

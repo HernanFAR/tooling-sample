@@ -1,8 +1,0 @@
-﻿vslices.exe : RELCLI007: Recommendation '1' already has an associated artifact.
-At C:\Users\Hernan\source\VSlices\tooling-sample\pruebas-nexus.ps1:20 char:15
-+     $output = & vslices @Arguments 2>&1 | Out-String
-+               ~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (RELCLI007: Reco...iated artifact.:String) [], RemoteException
-    + FullyQualifiedErrorId : NativeCommandError
- 
-

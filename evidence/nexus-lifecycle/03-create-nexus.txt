@@ -1,2 +1,0 @@
-﻿Created nexus 'C:\Users\Hernan\source\VSlices\tooling-sample\docs\prueba-nexus-capability\README.md'.
-
