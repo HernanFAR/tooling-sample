@@ -1,0 +1,9 @@
+
+FullName                                                                                       Length
+--------                                                                                       ------
+C:\Users\Hernan\source\VSlices\tooling-sample\docs\prueba-nexus-capability\README.md             1554
+C:\Users\Hernan\source\VSlices\tooling-sample\docs\prueba-nexus-capability\vslices-behavior.md    472
+C:\Users\Hernan\source\VSlices\tooling-sample\docs\prueba-nexus-capability\vslices-scope.md       456
+
+
+

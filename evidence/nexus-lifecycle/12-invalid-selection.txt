@@ -1,0 +1,8 @@
+﻿vslices.exe : RELCLI006: Recommendation '999' is not available on the current discovery surface.
+At C:\Users\Hernan\source\VSlices\tooling-sample\pruebas-nexus.ps1:19 char:16
++     $output = (& vslices @Arguments 2>&1 | Out-String)
++                ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (RELCLI006: Reco...covery surface.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+

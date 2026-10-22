@@ -1,0 +1,24 @@
+﻿Document:
+  path: docs\prueba-nexus-capability\vslices-behavior.md
+  type: vslices.behavior
+  scope: <unset>
+  target: Sistema de solicitudes
+  status: draft
+  tooling: build16.1330
+  tags: []
+  tag commands:
+    set: vslices update document C:\Users\Hernan\source\VSlices\tooling-sample\docs\prueba-nexus-capability\vslices-behavior.md --tags "<tag,...>"
+    add: vslices update document C:\Users\Hernan\source\VSlices\tooling-sample\docs\prueba-nexus-capability\vslices-behavior.md --add-tags "<tag,...>"
+    remove: vslices update document C:\Users\Hernan\source\VSlices\tooling-sample\docs\prueba-nexus-capability\vslices-behavior.md --remove-tags "<tag,...>"
+  relations:
+    - related: README.md (Explica qué debe ocurrir al ejercer la capacidad)
+
+Current document surface:
+Question tree:
+[root] ¿Qué debe ocurrir?
+
+[root] ¿Qué debe ocurrir?
+  status: unanswered
+  cardinality: one
+  command: vslices update document C:\Users\Hernan\source\VSlices\tooling-sample\docs\prueba-nexus-capability\vslices-behavior.md --question-id root --answer "<answer>"
+

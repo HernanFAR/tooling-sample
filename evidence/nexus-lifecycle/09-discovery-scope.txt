@@ -1,0 +1,24 @@
+﻿Document:
+  path: docs\prueba-nexus-capability\vslices-scope.md
+  type: vslices.scope
+  scope: <unset>
+  target: Sistema de solicitudes
+  status: draft
+  tooling: build16.1330
+  tags: []
+  tag commands:
+    set: vslices update document C:\Users\Hernan\source\VSlices\tooling-sample\docs\prueba-nexus-capability\vslices-scope.md --tags "<tag,...>"
+    add: vslices update document C:\Users\Hernan\source\VSlices\tooling-sample\docs\prueba-nexus-capability\vslices-scope.md --add-tags "<tag,...>"
+    remove: vslices update document C:\Users\Hernan\source\VSlices\tooling-sample\docs\prueba-nexus-capability\vslices-scope.md --remove-tags "<tag,...>"
+  relations:
+    - related: README.md (Define los límites de la capacidad)
+
+Current document surface:
+Question tree:
+[root] ¿Hasta dónde llega?
+
+[root] ¿Hasta dónde llega?
+  status: unanswered
+  cardinality: one
+  command: vslices update document C:\Users\Hernan\source\VSlices\tooling-sample\docs\prueba-nexus-capability\vslices-scope.md --question-id root --answer "<answer>"
+
